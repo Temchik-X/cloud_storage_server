@@ -28,9 +28,12 @@
     <None Include="wwwroot\css\styles.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-	  <Content Include="wwwroot\.well-known\*\*.*">
-		  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	  </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\.well-known\acme-challenge\aq93dCOWfIk9mRK-32Wq-rwZZx1yOnlzTjthVadC1sU">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
