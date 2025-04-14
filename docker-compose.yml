@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "65123:8080"
-      - "54123:443"
+      - "8080:8080"
+      - "443:443"
     volumes:
       - ./data:/app/Data
       - ./storage:/app/storage
