@@ -1,0 +1,657 @@
+2025-03-28 00:00:00.446 +03:00 [INF] Executed page /Index in 2380.2193ms
+2025-03-28 00:00:00.450 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:00:00.451 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 2389.22ms
+2025-03-28 00:00:00.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:00:00.451 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:00:00.461 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 9.8365ms
+2025-03-28 00:00:00.465 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.5009ms
+2025-03-28 00:00:05.094 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:00:05.096 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:00:05.096 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:00:05.097 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:00:05.098 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:00:05.099 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:00:05.103 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:00:05.104 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:00:05.105 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:00:05.106 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:00:05.106 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:00:05.107 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 9.2652ms
+2025-03-28 00:00:05.109 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:00:05.110 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 16.0056ms
+2025-03-28 00:00:05.750 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:00:05.752 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:00:05.753 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-28 00:00:05.756 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-28 00:00:05.757 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-28 00:00:05.758 +03:00 [INF] Получен список подключенных директорий.
+2025-03-28 00:00:05.759 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 00:00:05.761 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 5.3495ms
+2025-03-28 00:00:05.762 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:00:05.763 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 200 null application/json; charset=utf-8 13.3758ms
+2025-03-28 00:01:57.913 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:01:57.918 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:01:57.920 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:01:57.921 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:01:57.922 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:01:57.922 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:01:57.923 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:02:00.846 +03:00 [INF] Executed page /Index in 2924.6444ms
+2025-03-28 00:02:00.847 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:02:00.848 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 2935.5364ms
+2025-03-28 00:02:00.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:02:00.850 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:02:00.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.9809ms
+2025-03-28 00:02:00.866 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.9636ms
+2025-03-28 00:02:10.422 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:02:10.424 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:02:10.425 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:02:10.427 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:02:10.429 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:02:10.430 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:02:10.434 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:02:10.435 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:02:10.436 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:02:10.437 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:02:10.437 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:02:10.439 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 10.4087ms
+2025-03-28 00:02:10.439 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:02:10.440 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 18.4031ms
+2025-03-28 00:02:10.873 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:02:10.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:02:10.876 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:02:10.878 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:02:10.879 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:02:10.880 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:02:10.881 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-28 00:02:10.881 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:02:10.883 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-28 00:02:10.883 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:02:10.884 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-28 00:02:10.884 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:02:10.886 +03:00 [INF] Получен список подключенных директорий.
+2025-03-28 00:02:10.887 +03:00 [INF] Executed page /Index in 7.1592ms
+2025-03-28 00:02:10.888 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 00:02:10.888 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:02:10.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 15.8156ms
+2025-03-28 00:02:10.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:02:10.893 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:02:10.895 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 12.1099ms
+2025-03-28 00:02:10.901 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.4896ms
+2025-03-28 00:02:10.903 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.1232ms
+2025-03-28 00:02:10.903 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:02:10.907 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 499 null application/json; charset=utf-8 34.6136ms
+2025-03-28 00:07:40.490 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:07:40.494 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:07:40.494 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:07:40.495 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:07:40.497 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:07:40.498 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:07:40.501 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:07:40.502 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:07:40.504 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:07:40.504 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:07:40.505 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:07:40.506 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 9.3938ms
+2025-03-28 00:07:40.509 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:07:40.510 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 20.1782ms
+2025-03-28 00:07:41.487 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:07:41.490 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:07:41.490 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:07:41.491 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-28 00:07:41.498 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:07:41.498 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-28 00:07:41.499 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:07:41.500 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-28 00:07:41.501 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:07:41.503 +03:00 [INF] Получен список подключенных директорий.
+2025-03-28 00:07:41.503 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:07:41.504 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 00:07:41.504 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:07:41.506 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 7.8644ms
+2025-03-28 00:07:41.507 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:07:41.508 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:08:31.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 200 null application/json; charset=utf-8 50358.358ms
+2025-03-28 00:08:31.848 +03:00 [INF] Executed page /Index in 50347.174ms
+2025-03-28 00:08:31.849 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:08:31.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 50360.6064ms
+2025-03-28 00:08:31.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:08:31.853 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:08:31.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.6866ms
+2025-03-28 00:08:31.865 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 12.1892ms
+2025-03-28 00:08:41.398 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:08:41.400 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:08:41.401 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:08:41.401 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:08:41.403 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:08:41.404 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:08:41.407 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:08:41.408 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:08:41.409 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:08:41.410 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:08:41.410 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:08:41.411 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 8.8372ms
+2025-03-28 00:08:41.412 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:08:41.413 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 14.502ms
+2025-03-28 00:08:45.828 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:08:45.830 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:08:45.830 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:08:45.832 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:08:45.832 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-28 00:08:45.833 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:08:45.835 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-28 00:08:45.835 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:08:45.836 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-28 00:08:45.837 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:08:45.838 +03:00 [INF] Получен список подключенных директорий.
+2025-03-28 00:08:45.839 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:08:45.839 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 00:08:45.840 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:14:49.088 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 00:14:49.249 +03:00 [INF] Применение миграций, если они есть
+2025-03-28 00:14:49.689 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 00:14:49.711 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 00:14:49.763 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-27 21:14:49.7166961+00:00');
+SELECT changes();
+2025-03-28 00:14:49.803 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 00:14:49.813 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 00:14:49.816 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 00:14:49.822 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 00:14:49.862 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 00:14:49.985 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-03-28 00:14:49.987 +03:00 [INF] Инициализация завершена
+2025-03-28 00:14:49.989 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-03-28 00:14:50.018 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.021 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.023 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.025 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.026 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.028 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.030 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.031 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.033 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.035 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.037 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.038 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.040 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.042 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.043 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.045 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.047 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.048 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.050 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:14:50.051 +03:00 [INF] Стандартные икноки загружены успешно
+2025-03-28 00:14:50.177 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-28 00:14:50.178 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-28 00:14:50.178 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 00:14:50.179 +03:00 [INF] Hosting environment: Development
+2025-03-28 00:14:50.180 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-28 00:14:51.032 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-28 00:14:51.223 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 198.7894ms
+2025-03-28 00:14:51.251 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:14:51.251 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:14:51.257 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.9159ms
+2025-03-28 00:14:51.281 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.4473ms
+2025-03-28 00:14:51.307 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-28 00:14:51.384 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 78.0815ms
+2025-03-28 00:14:57.346 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:14:57.394 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:14:57.409 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:14:57.415 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:15:17.378 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:15:17.381 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:15:17.382 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:15:20.393 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:15:20.393 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:15:20.399 +03:00 [INF] Executed page /Index in 22984.6595ms
+2025-03-28 00:15:20.401 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.8078ms
+2025-03-28 00:15:20.405 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:15:20.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.5547ms
+2025-03-28 00:15:20.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 23067.4575ms
+2025-03-28 00:15:20.426 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/favicon.ico - null null
+2025-03-28 00:15:20.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/favicon.ico - 404 null text/plain 4.1297ms
+2025-03-28 00:15:20.432 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7067/favicon.ico, Response status code: 404
+2025-03-28 00:15:47.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:15:47.551 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:15:47.551 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:15:47.552 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:15:49.751 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:15:49.752 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:15:49.753 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:16:24.764 +03:00 [INF] Executed page /Index in 37211.8025ms
+2025-03-28 00:16:24.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:16:24.765 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:16:24.769 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:16:24.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.1355ms
+2025-03-28 00:16:24.776 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 37234.4707ms
+2025-03-28 00:16:24.782 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.4445ms
+2025-03-28 00:16:29.215 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:16:29.218 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:16:29.219 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:16:29.231 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:16:29.246 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:16:29.286 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:16:29.325 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:16:29.332 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:16:29.337 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:16:29.359 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:16:29.362 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:16:29.372 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 139.1896ms
+2025-03-28 00:16:29.373 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:16:29.375 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 160.2995ms
+2025-03-28 00:16:30.673 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:16:30.676 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:16:30.679 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:16:30.681 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:16:30.681 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:21:07.689 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-28 00:21:07.852 +03:00 [INF] Применение миграций, если они есть
+2025-03-28 00:21:08.303 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-03-28 00:21:08.322 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-03-28 00:21:08.359 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-03-27 21:21:08.3265999+00:00');
+SELECT changes();
+2025-03-28 00:21:08.399 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-03-28 00:21:08.409 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-03-28 00:21:08.413 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-03-28 00:21:08.419 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-03-28 00:21:08.455 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-03-28 00:21:08.581 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-03-28 00:21:08.583 +03:00 [INF] Инициализация завершена
+2025-03-28 00:21:08.585 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-03-28 00:21:08.616 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.619 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.621 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.623 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.625 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.627 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.628 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.630 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.631 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.633 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.635 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.637 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.638 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.640 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.642 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.643 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.645 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.647 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.648 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-03-28 00:21:08.650 +03:00 [INF] Стандартные икноки загружены успешно
+2025-03-28 00:21:08.772 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-28 00:21:08.773 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-28 00:21:08.774 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-28 00:21:08.775 +03:00 [INF] Hosting environment: Development
+2025-03-28 00:21:08.775 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-28 00:21:09.643 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-28 00:21:09.802 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 168.5798ms
+2025-03-28 00:21:09.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:21:09.826 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:21:09.835 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 8.9699ms
+2025-03-28 00:21:09.852 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.8663ms
+2025-03-28 00:21:09.875 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-28 00:21:09.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.8977ms
+2025-03-28 00:21:13.197 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:21:13.241 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:21:13.256 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:21:13.262 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:21:14.409 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:21:14.412 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:21:14.413 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:21:14.436 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:21:14.436 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:21:14.438 +03:00 [INF] Executed page /Index in 1177.517ms
+2025-03-28 00:21:14.439 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.0917ms
+2025-03-28 00:21:14.442 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:21:14.449 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 1252.5362ms
+2025-03-28 00:21:14.452 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 16.4471ms
+2025-03-28 00:21:14.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/favicon.ico - null null
+2025-03-28 00:21:14.469 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/favicon.ico - 404 null text/plain 4.2007ms
+2025-03-28 00:21:14.471 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7067/favicon.ico, Response status code: 404
+2025-03-28 00:21:21.699 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:21:21.703 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:21:21.704 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:21:21.705 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:21:56.376 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:21:56.386 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:21:56.387 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:21:56.397 +03:00 [INF] Executed page /Index in 34692.6171ms
+2025-03-28 00:21:56.398 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:21:56.399 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 34700.4665ms
+2025-03-28 00:21:56.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:21:56.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:21:56.404 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 3.5789ms
+2025-03-28 00:21:56.416 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 15.8135ms
+2025-03-28 00:21:57.363 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:21:57.367 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:21:57.369 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:21:57.370 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:22:05.223 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:22:47.191 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:22:05.223 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:22:47.202 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:22:47.205 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:22:47.210 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:22:47.210 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:22:47.211 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:22:47.211 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:22:47.215 +03:00 [INF] Executed page /Index in 49844.876ms
+2025-03-28 00:22:47.216 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:22:47.217 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 49853.9874ms
+2025-03-28 00:22:47.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:22:47.221 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:22:47.233 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 12.5083ms
+2025-03-28 00:22:47.242 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:22:47.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.5892ms
+2025-03-28 00:22:47.242 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:22:47.257 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 10.5554ms
+2025-03-28 00:22:47.257 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 13.62ms
+2025-03-28 00:22:47.258 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:22:47.259 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:22:47.261 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 499 null null 42038.3572ms
+2025-03-28 00:22:47.261 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 499 null null 42039.1798ms
+2025-03-28 00:22:48.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:22:48.190 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:22:48.192 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:22:48.193 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:22:51.544 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:22:51.545 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:22:51.546 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:22:51.549 +03:00 [INF] Executed page /Index in 3356.0807ms
+2025-03-28 00:22:51.550 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:22:51.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 3363.4502ms
+2025-03-28 00:22:51.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:22:51.554 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:22:51.557 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.819ms
+2025-03-28 00:22:51.565 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.5739ms
+2025-03-28 00:22:57.687 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:22:57.690 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:22:57.691 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:22:57.692 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:22:59.047 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:22:59.048 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:22:59.048 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:22:59.051 +03:00 [INF] Executed page /Index in 1359.4135ms
+2025-03-28 00:22:59.052 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:22:59.053 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 1365.8887ms
+2025-03-28 00:22:59.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:22:59.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:22:59.058 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.4068ms
+2025-03-28 00:22:59.069 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.3019ms
+2025-03-28 00:23:03.689 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-28 00:23:03.691 +03:00 [INF] CORS policy execution successful.
+2025-03-28 00:23:03.691 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:23:03.694 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-28 00:23:03.704 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-28 00:23:03.743 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:23:03.779 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-28 00:23:03.786 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-03-28 00:23:03.790 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:23:03.805 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-28 00:23:03.807 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-28 00:23:03.816 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 120.3923ms
+2025-03-28 00:23:03.817 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-28 00:23:03.819 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 130.2258ms
+2025-03-28 00:23:04.323 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-28 00:23:04.326 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-28 00:23:04.329 +03:00 [INF] Executing endpoint '/Index'
+2025-03-28 00:23:04.330 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-28 00:23:04.331 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-28 00:29:18.816 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-28 00:29:18.826 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-28 00:29:18.832 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-28 00:29:18.838 +03:00 [INF] Executed page /Index in 374506.8692ms
+2025-03-28 00:29:18.841 +03:00 [INF] Executed endpoint '/Index'
+2025-03-28 00:29:18.842 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 374515.8904ms
+2025-03-28 00:29:18.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/css/styles.css - null null
+2025-03-28 00:29:18.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-03-28 00:29:18.844 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-28 00:29:18.855 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 11.383ms
+2025-03-28 00:29:18.859 +03:00 [INF] The file /css/styles.css was not modified
+2025-03-28 00:29:18.861 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.1315ms
+2025-03-28 00:29:18.863 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/css/styles.css - 304 null text/css 19.2591ms
+2025-03-28 00:29:18.878 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:29:18.881 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-28 00:29:18.884 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-28 00:29:19.075 +03:00 [INF] Executed DbCommand (155ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-28 00:29:19.084 +03:00 [INF] Получен список подключенных директорий.
+2025-03-28 00:29:19.091 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType7`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-28 00:29:19.102 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 219.1938ms
+2025-03-28 00:29:19.103 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-28 00:29:19.103 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 499 null application/json; charset=utf-8 374780.378ms

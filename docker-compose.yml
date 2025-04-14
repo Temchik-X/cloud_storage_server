@@ -1,0 +1,14 @@
+services:
+  cloudmediastorage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "65123:8080"
+      - "54123:443"
+    volumes:
+      - ./data:/app/Data
+      - ./storage:/app/storage
+      - ./certs:/https
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production

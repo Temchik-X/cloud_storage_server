@@ -1,0 +1,485 @@
+2025-03-16 20:31:57.351 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 20:31:57.551 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 20:31:57.552 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 20:31:57.554 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 20:31:57.555 +03:00 [INF] Hosting environment: Development
+2025-03-16 20:31:57.555 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 20:31:58.463 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 20:31:59.784 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1327.1136ms
+2025-03-16 20:31:59.799 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 20:31:59.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.9963ms
+2025-03-16 20:31:59.840 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 20:31:59.904 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 64.7822ms
+2025-03-16 20:32:11.256 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 58
+2025-03-16 20:32:11.305 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 20:32:11.319 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-16 20:32:11.344 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-16 20:32:11.345 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-16 20:32:11.348 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-16 20:32:11.371 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-16 20:32:11.375 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-16 20:32:11.385 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 62.7557ms
+2025-03-16 20:32:11.386 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 20:32:11.387 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 130.773ms
+2025-03-16 20:32:27.180 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/access - null 0
+2025-03-16 20:32:27.209 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Access (Presentation)'
+2025-03-16 20:32:27.211 +03:00 [INF] Route matched with {action = "Access", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Access() on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-16 20:32:27.212 +03:00 [INF] Получен запрос на доступ к защищенному ресурсу.
+2025-03-16 20:32:27.213 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 20:32:27.214 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Access (Presentation) in 1.8221ms
+2025-03-16 20:32:27.215 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Access (Presentation)'
+2025-03-16 20:32:27.216 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/access - 200 null text/plain; charset=utf-8 35.8395ms
+2025-03-16 20:32:39.402 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-16 20:32:39.408 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:32:39.412 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 20:32:39.515 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-16 20:32:39.990 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."IsFolder", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 20:32:40.000 +03:00 [INF] Получен список подключенных директорий.
+2025-03-16 20:32:40.001 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 20:32:40.006 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 591.7663ms
+2025-03-16 20:32:40.007 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:32:40.011 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 200 null application/json; charset=utf-8 609.9643ms
+2025-03-16 20:33:05.343 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/index - null null
+2025-03-16 20:33:08.969 +03:00 [INF] Executing endpoint '/Index'
+2025-03-16 20:33:08.977 +03:00 [INF] Route matched with {page = "/Index", action = "", controller = ""}. Executing page /Index
+2025-03-16 20:33:08.981 +03:00 [INF] Executing handler method Presentation.Pages.IndexModel.OnGet - ModelState is "Valid"
+2025-03-16 20:33:08.982 +03:00 [INF] Executed handler method OnGet, returned result .
+2025-03-16 20:33:08.984 +03:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2025-03-16 20:33:08.985 +03:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2025-03-16 20:33:09.005 +03:00 [INF] Executed page /Index in 27.9414ms
+2025-03-16 20:33:09.007 +03:00 [INF] Executed endpoint '/Index'
+2025-03-16 20:33:09.014 +03:00 [WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+2025-03-16 20:33:09.017 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/index - 200 null text/html; charset=utf-8 3673.2409ms
+2025-03-16 20:33:09.046 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/favicon.ico - null null
+2025-03-16 20:33:09.049 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/favicon.ico - 404 null text/plain 3.135ms
+2025-03-16 20:33:09.051 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7067/favicon.ico, Response status code: 404
+2025-03-16 20:33:16.266 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 38
+2025-03-16 20:33:16.267 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 20:33:16.268 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-16 20:33:16.270 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-16 20:33:16.271 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-16 20:33:16.271 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-16 20:33:16.272 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-16 20:33:16.273 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-16 20:33:16.274 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 4.9009ms
+2025-03-16 20:33:16.275 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 20:33:16.275 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 10.0258ms
+2025-03-16 20:33:17.578 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-16 20:33:17.581 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:33:17.582 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 20:33:17.584 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-16 20:33:17.593 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."IsFolder", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 20:33:17.595 +03:00 [INF] Получен список подключенных директорий.
+2025-03-16 20:33:17.596 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 20:33:17.598 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 14.6547ms
+2025-03-16 20:33:17.599 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:33:17.600 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 200 null application/json; charset=utf-8 22.5437ms
+2025-03-16 20:33:26.733 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/disk/addDirectory - application/json 8
+2025-03-16 20:33:26.735 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.AddDirectory (Presentation)'
+2025-03-16 20:33:26.737 +03:00 [INF] Route matched with {action = "AddDirectory", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddDirectory(System.String) on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 20:33:26.742 +03:00 [INF] Получен запрос на добавление директории: Z:\\
+2025-03-16 20:33:26.829 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fullPath_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Disks" AS "d"
+    WHERE "d"."Name" = @__fullPath_0 AND "d"."IsFolder")
+2025-03-16 20:33:26.903 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?', @p1='?' (DbType = Boolean), @p2='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Disks" ("Description", "IsFolder", "Name")
+VALUES (@p0, @p1, @p2)
+RETURNING "Id";
+2025-03-16 20:33:26.984 +03:00 [INF] Директория успешно добавлена: Z:\
+2025-03-16 20:33:26.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 20:33:26.985 +03:00 [INF] Executed action Presentation.Controllers.DiskController.AddDirectory (Presentation) in 246.7975ms
+2025-03-16 20:33:26.986 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.AddDirectory (Presentation)'
+2025-03-16 20:33:26.987 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/disk/addDirectory - 200 null text/plain; charset=utf-8 254.3259ms
+2025-03-16 20:33:28.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - null null
+2025-03-16 20:33:28.183 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:33:28.184 +03:00 [INF] Route matched with {action = "GetConnectedDirectories", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetConnectedDirectories() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 20:33:28.185 +03:00 [INF] Получен запрос на получение подключенных директорий.
+2025-03-16 20:33:28.186 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."IsFolder", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 20:33:28.190 +03:00 [INF] Получен список подключенных директорий.
+2025-03-16 20:33:28.196 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Double, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 20:33:28.201 +03:00 [INF] Executed action Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation) in 15.8747ms
+2025-03-16 20:33:28.202 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.GetConnectedDirectories (Presentation)'
+2025-03-16 20:33:28.202 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/disk/connectedDirectories - 200 null application/json; charset=utf-8 21.3255ms
+2025-03-16 20:33:38.177 +03:00 [INF] Request starting HTTP/2 PUT https://localhost:7067/api/disk/updateDescription/17 - application/json 25
+2025-03-16 20:33:38.179 +03:00 [INF] Request finished HTTP/2 PUT https://localhost:7067/api/disk/updateDescription/17 - 404 null text/plain 1.8612ms
+2025-03-16 20:33:38.182 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: PUT https://localhost:7067/api/disk/updateDescription/17, Response status code: 404
+2025-03-16 20:33:41.730 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/disk/index - application/json 0
+2025-03-16 20:33:41.733 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.IndexFiles (Presentation)'
+2025-03-16 20:33:41.736 +03:00 [INF] Route matched with {action = "IndexFiles", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexFiles() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 20:33:41.738 +03:00 [INF] Получен запрос на индексацию файлов.
+2025-03-16 20:33:41.740 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."IsFolder", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 20:33:42.389 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 34)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 20:33:42.402 +03:00 [INF] Файл добавлен в базу данных: Z:\iceandfire_1.9.1_1.12.2 (2).jar
+2025-03-16 20:33:42.404 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 20:33:42.406 +03:00 [INF] Файл добавлен в базу данных: Z:\lab2.pdf
+2025-03-16 20:33:42.407 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 33)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 20:33:42.409 +03:00 [INF] Файл добавлен в базу данных: Z:\llibrary_1.7.20_1.12.2 (1).jar
+2025-03-16 20:33:42.410 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 37)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 20:33:42.411 +03:00 [INF] Файл добавлен в базу данных: Z:\techguns_1.12.2_2.0.2.0_pre3.2.jar
+2025-03-16 20:33:42.412 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 28)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 20:33:42.414 +03:00 [INF] Файл добавлен в базу данных: Z:\Новый том (Z) - Ярлык.lnk
+2025-03-16 20:33:42.426 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 31), @p2='?' (Size = 34), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 20:33:42.429 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 8), @p2='?' (Size = 11), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 20:33:42.431 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 30), @p2='?' (Size = 33), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 20:33:42.433 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 34), @p2='?' (Size = 37), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 20:33:42.436 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 25), @p2='?' (Size = 28), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 20:33:42.500 +03:00 [INF] Индексация файлов завершена.
+2025-03-16 20:33:42.501 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 20:33:42.502 +03:00 [INF] Executed action Presentation.Controllers.DiskController.IndexFiles (Presentation) in 763.9178ms
+2025-03-16 20:33:42.502 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.IndexFiles (Presentation)'
+2025-03-16 20:33:42.503 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/disk/index - 200 null text/plain; charset=utf-8 772.711ms
+2025-03-16 23:27:09.999 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:27:10.238 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:27:10.239 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:27:10.241 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:27:10.242 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:27:10.243 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:27:11.659 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:27:14.046 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 2393.3767ms
+2025-03-16 23:27:14.061 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:27:14.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.879ms
+2025-03-16 23:27:14.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:27:14.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 72.5131ms
+2025-03-16 23:27:25.232 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 58
+2025-03-16 23:27:25.369 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 23:27:25.387 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-16 23:27:25.438 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-03-16 23:27:25.439 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-03-16 23:27:25.442 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-03-16 23:27:25.506 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-03-16 23:27:25.511 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-03-16 23:27:25.521 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 130.6808ms
+2025-03-16 23:27:25.522 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-03-16 23:27:25.523 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 291.2818ms
+2025-03-16 23:27:38.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/files/list - null null
+2025-03-16 23:27:38.211 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:27:38.216 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList() on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:27:38.498 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-03-16 23:27:39.166 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."UpdatedAt", "f"."FilePath"
+FROM "Files" AS "f"
+WHERE NOT ("f"."IsDeleted")
+2025-03-16 23:27:39.178 +03:00 [INF] Список файлов успешно получен.
+2025-03-16 23:27:39.179 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType2`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 23:27:39.203 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 985.766ms
+2025-03-16 23:27:39.205 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:27:39.209 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/files/list - 200 null application/json; charset=utf-8 1090.3282ms
+2025-03-16 23:28:00.482 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/disk/index - null 0
+2025-03-16 23:28:00.490 +03:00 [INF] Executing endpoint 'Presentation.Controllers.DiskController.IndexFiles (Presentation)'
+2025-03-16 23:28:00.492 +03:00 [INF] Route matched with {action = "IndexFiles", controller = "Disk", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] IndexFiles() on controller Presentation.Controllers.DiskController (Presentation).
+2025-03-16 23:28:00.495 +03:00 [INF] Получен запрос на индексацию файлов.
+2025-03-16 23:28:00.535 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Id", "d"."Description", "d"."IsFolder", "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 23:28:01.076 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__file_FilePath_0='?' (Size = 34)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 23:28:01.091 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 23:28:01.093 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 33)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 23:28:01.095 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 37)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 23:28:01.096 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__file_FilePath_0='?' (Size = 28)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."FilePath" = @__file_FilePath_0
+LIMIT 1
+2025-03-16 23:28:01.116 +03:00 [INF] Индексация файлов завершена.
+2025-03-16 23:28:01.117 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 23:28:01.118 +03:00 [INF] Executed action Presentation.Controllers.DiskController.IndexFiles (Presentation) in 623.6793ms
+2025-03-16 23:28:01.118 +03:00 [INF] Executed endpoint 'Presentation.Controllers.DiskController.IndexFiles (Presentation)'
+2025-03-16 23:28:01.119 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/disk/index - 200 null text/plain; charset=utf-8 637.1938ms
+2025-03-16 23:28:05.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/files/list - null null
+2025-03-16 23:28:05.068 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:28:05.069 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList() on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:28:05.071 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-03-16 23:28:05.104 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."UpdatedAt", "f"."FilePath"
+FROM "Files" AS "f"
+WHERE NOT ("f"."IsDeleted")
+2025-03-16 23:28:05.106 +03:00 [INF] Список файлов успешно получен.
+2025-03-16 23:28:05.106 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType2`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 23:28:05.108 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 37.8989ms
+2025-03-16 23:28:05.109 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:28:05.109 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/files/list - 200 null application/json; charset=utf-8 45.0375ms
+2025-03-16 23:28:21.740 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundary4zQzAzzyJJ8Wsskj 402711
+2025-03-16 23:28:21.743 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:28:21.746 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:28:21.817 +03:00 [INF] Получен запрос на загрузку файла.
+2025-03-16 23:28:21.822 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 23:28:21.830 +03:00 [INF] Выбран диск с достаточным свободным местом: Z:\
+2025-03-16 23:28:21.911 +03:00 [INF] Хеш файла успешно сгенерирован: CFEA1720D1D74457A3AC2FD1EB3D16EAE92D4ACFB4D4B6AF738EFD45755E8573
+2025-03-16 23:28:22.004 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 37), @p2='?' (Size = 40), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 23:28:22.072 +03:00 [INF] Файл успешно загружен: Z:\Хорошилов Артемий Дмитриевич  (1).pdf
+2025-03-16 23:28:22.073 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 23:28:22.075 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 327.1202ms
+2025-03-16 23:28:22.076 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:28:22.078 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 200 null text/plain; charset=utf-8 337.5225ms
+2025-03-16 23:28:29.869 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data 0
+2025-03-16 23:28:29.871 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:28:29.872 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:28:29.878 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:28:29.891 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 17.2635ms
+2025-03-16 23:28:29.892 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:28:29.893 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 400 null application/problem+json; charset=utf-8 24.9098ms
+2025-03-16 23:29:40.761 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryqqRBAObkA3ppcVta 5172872176
+2025-03-16 23:29:40.768 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:29:40.769 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:29:40.776 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:29:40.778 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 7.6019ms
+2025-03-16 23:29:40.778 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:29:40.779 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 400 null application/problem+json; charset=utf-8 18.1619ms
+2025-03-16 23:29:40.783 +03:00 [INF] Connection id "0HNB4P3MT9UJO", Request id "0HNB4P3MT9UJO:00000013": the application completed without reading the entire request body.
+2025-03-16 23:33:05.724 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:33:05.921 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:33:05.922 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:33:05.924 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:33:05.924 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:33:05.925 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:33:06.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:33:08.412 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1548.181ms
+2025-03-16 23:33:08.425 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:33:08.430 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.3266ms
+2025-03-16 23:33:08.464 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:33:08.540 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 76.8498ms
+2025-03-16 23:33:32.909 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/access - null 0
+2025-03-16 23:33:32.992 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Access (Presentation)'
+2025-03-16 23:33:33.004 +03:00 [INF] Route matched with {action = "Access", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Access() on controller Presentation.Controllers.AuthController (Presentation).
+2025-03-16 23:33:33.006 +03:00 [INF] Получен запрос на доступ к защищенному ресурсу.
+2025-03-16 23:33:33.010 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 23:33:33.013 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Access (Presentation) in 6.2107ms
+2025-03-16 23:33:33.014 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Access (Presentation)'
+2025-03-16 23:33:33.015 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/access - 200 null text/plain; charset=utf-8 106.368ms
+2025-03-16 23:33:57.188 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundary6Du4RA6mtBCICAzP 325304791
+2025-03-16 23:33:57.201 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:33:57.213 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:33:59.786 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:33:59.802 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 2588.2498ms
+2025-03-16 23:33:59.804 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:33:59.815 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 400 null application/problem+json; charset=utf-8 2628.3697ms
+2025-03-16 23:33:59.817 +03:00 [INF] Connection id "0HNB4P70UFSHD", Request id "0HNB4P70UFSHD:00000009": the application completed without reading the entire request body.
+2025-03-16 23:40:38.984 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:40:39.183 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:40:39.184 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:40:39.186 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:40:39.187 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:40:39.188 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:40:40.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:40:41.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1307.8842ms
+2025-03-16 23:40:41.671 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:40:41.675 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.5997ms
+2025-03-16 23:40:41.709 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:40:41.773 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 64.4739ms
+2025-03-16 23:40:57.172 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload-stream - null 0
+2025-03-16 23:40:57.263 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFileStream (Presentation)'
+2025-03-16 23:40:57.277 +03:00 [INF] Route matched with {action = "UploadFileStream", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFileStream() on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:45:04.058 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:45:04.293 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:45:04.294 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:45:04.296 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:45:04.297 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:45:04.297 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:45:05.367 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:45:06.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1303.8115ms
+2025-03-16 23:45:06.679 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:45:06.684 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.9219ms
+2025-03-16 23:45:06.722 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:45:06.790 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 68.6983ms
+2025-03-16 23:45:32.628 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryfrcwxWzyeglnYsOD 325304791
+2025-03-16 23:45:32.711 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:45:32.728 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:45:34.644 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:45:34.662 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 1930.917ms
+2025-03-16 23:45:34.663 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:45:34.673 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 400 null application/problem+json; charset=utf-8 2045.7508ms
+2025-03-16 23:45:34.675 +03:00 [INF] Connection id "0HNB4PDN28T15", Request id "0HNB4PDN28T15:00000001": the application completed without reading the entire request body.
+2025-03-16 23:47:05.102 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:47:05.295 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:47:05.296 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:47:05.299 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:47:05.299 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:47:05.300 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:47:06.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:47:07.650 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1305.3727ms
+2025-03-16 23:47:07.666 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:47:07.672 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 5.5407ms
+2025-03-16 23:47:07.709 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:47:07.795 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 86.8186ms
+2025-03-16 23:47:24.918 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryDIoyyDnbsYKFk0yP 325304791
+2025-03-16 23:47:25.004 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:47:25.021 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:47:30.732 +03:00 [INF] Получен запрос на загрузку файла.
+2025-03-16 23:47:31.168 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 23:47:31.187 +03:00 [INF] Выбран диск с достаточным свободным местом: Z:\
+2025-03-16 23:47:40.625 +03:00 [INF] Хеш файла успешно сгенерирован: 9A0C68640A6A1FDB3E73F9FB6173D6E4A7C08EFE2817F0870DF585840FCB71E4
+2025-03-16 23:47:40.716 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (Size = 55), @p2='?' (Size = 58), @p3='?' (Size = 4), @p4='?' (Size = 64), @p5='?' (DbType = Int64), @p6='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Files" ("CreatedAt", "FileName", "FilePath", "FileType", "Hash", "Size", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6)
+RETURNING "Id", "IsDeleted";
+2025-03-16 23:47:40.775 +03:00 [INF] Файл успешно загружен: Z:\[SETUP] My Summer Car v231210-01 RePack by Enobraed.exe
+2025-03-16 23:47:40.781 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-03-16 23:47:40.785 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 15761.2115ms
+2025-03-16 23:47:40.786 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:47:40.795 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 200 null text/plain; charset=utf-8 15877.5064ms
+2025-03-16 23:48:11.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/files/list - null null
+2025-03-16 23:48:11.030 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:48:11.033 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList() on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:48:11.035 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-03-16 23:48:11.057 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."UpdatedAt", "f"."FilePath"
+FROM "Files" AS "f"
+WHERE NOT ("f"."IsDeleted")
+2025-03-16 23:48:11.060 +03:00 [INF] Список файлов успешно получен.
+2025-03-16 23:48:11.060 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType2`7[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-03-16 23:48:11.077 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 42.9153ms
+2025-03-16 23:48:11.078 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-03-16 23:48:11.079 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/files/list - 200 null application/json; charset=utf-8 59.2704ms
+2025-03-16 23:48:17.582 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/files/download/14 - null null
+2025-03-16 23:48:17.586 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadFile (Presentation)'
+2025-03-16 23:48:17.590 +03:00 [INF] Route matched with {action = "DownloadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:48:17.599 +03:00 [INF] Получен запрос на скачивание файла с ID: 14
+2025-03-16 23:48:17.664 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."Hash", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."Id" = @__id_0
+LIMIT 1
+2025-03-16 23:48:17.668 +03:00 [INF] Файл с ID 14 успешно подготовлен для скачивания.
+2025-03-16 23:48:17.669 +03:00 [INF] Executing FileStreamResult, sending file with download name '[SETUP] My Summer Car v231210-01 RePack by Enobraed.exe' ...
+2025-03-16 23:48:20.071 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadFile (Presentation) in 2479.6106ms
+2025-03-16 23:48:20.072 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadFile (Presentation)'
+2025-03-16 23:48:20.072 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/files/download/14 - 200 325304548 application/octet-stream 2490.399ms
+2025-03-16 23:52:57.989 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:52:58.258 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:52:58.260 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:52:58.262 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:52:58.263 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:52:58.263 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:52:59.234 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:53:00.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1335.8289ms
+2025-03-16 23:53:01.401 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:53:01.406 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.9178ms
+2025-03-16 23:53:01.441 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:53:01.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 66.6706ms
+2025-03-16 23:53:37.559 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundary05xoq8ljAnrixAHF 5172872176
+2025-03-16 23:53:37.645 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:53:37.663 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:55:09.919 +03:00 [INF] Получен запрос на загрузку файла.
+2025-03-16 23:55:10.839 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Name"
+FROM "Disks" AS "d"
+2025-03-16 23:55:10.865 +03:00 [ERR] Недостаточно места на всех доступных дисках.
+2025-03-16 23:55:10.866 +03:00 [ERR] Не удалось найти подходящий диск для загрузки файла.
+2025-03-16 23:55:10.897 +03:00 [ERR] Ошибка при загрузке файла.
+System.InvalidOperationException: Недостаточно места на всех доступных дисках.
+   at Application.Services.FileService.UploadFile(IFormFile file) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 101
+2025-03-16 23:55:10.944 +03:00 [ERR] Ошибка при загрузке файла.
+System.InvalidOperationException: Недостаточно места на всех доступных дисках.
+   at Application.Services.FileService.UploadFile(IFormFile file) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 101
+   at Presentation.Controllers.FileController.UploadFile(IFormFile file) in D:\Пользователь\YandexDisk\CloudMedia\src\Presentation\Controllers\FileController.cs:line 76
+2025-03-16 23:55:10.951 +03:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2025-03-16 23:55:10.955 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 93288.7568ms
+2025-03-16 23:55:10.956 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:55:10.985 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 500 null text/plain; charset=utf-8 93425.7645ms
+2025-03-16 23:56:05.194 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryUASCRo64GnumWgB1 5172872176
+2025-03-16 23:56:05.202 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:56:05.203 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:56:28.223 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryAKS5MrcOoitRTE5Y 5172872176
+2025-03-16 23:56:28.229 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:56:28.230 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:56:56.909 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:56:58.071 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1162.0459ms
+2025-03-16 23:56:58.079 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:56:58.079 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-03-16 23:56:58.089 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:56:58.091 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 2.3919ms
+2025-03-16 23:56:58.102 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 52897.2686ms
+2025-03-16 23:56:58.102 +03:00 [INF] Executed action Presentation.Controllers.FileController.UploadFile (Presentation) in 29870.7355ms
+2025-03-16 23:56:58.103 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:56:58.103 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:56:58.129 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:56:58.134 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 5.6301ms
+2025-03-16 23:56:58.151 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 499 null application/problem+json; charset=utf-8 29928.0401ms
+2025-03-16 23:56:58.152 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/files/upload - 499 null application/problem+json; charset=utf-8 52959.234ms
+2025-03-16 23:57:09.965 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-03-16 23:57:10.154 +03:00 [INF] Now listening on: https://localhost:7067
+2025-03-16 23:57:10.155 +03:00 [INF] Now listening on: http://localhost:5090
+2025-03-16 23:57:10.157 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-03-16 23:57:10.158 +03:00 [INF] Hosting environment: Development
+2025-03-16 23:57:10.159 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-03-16 23:57:11.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-03-16 23:57:12.747 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1289.7537ms
+2025-03-16 23:57:12.782 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-03-16 23:57:12.788 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.0122ms
+2025-03-16 23:57:12.823 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-03-16 23:57:12.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 67.6168ms
+2025-03-16 23:57:42.851 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/files/upload - multipart/form-data; boundary=----WebKitFormBoundaryu5VUwj6n0cEL1dbL 5172872176
+2025-03-16 23:57:42.998 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.UploadFile (Presentation)'
+2025-03-16 23:57:43.015 +03:00 [INF] Route matched with {action = "UploadFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UploadFile(Microsoft.AspNetCore.Http.IFormFile) on controller Presentation.Controllers.FileController (Presentation).
+2025-03-16 23:59:36.252 +03:00 [INF] Получен запрос на загрузку файла.
+2025-03-16 23:59:51.159 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "d"."Name"
+FROM "Disks" AS "d"

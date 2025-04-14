@@ -1,0 +1,49 @@
+2025-04-05 00:08:36.662 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-05 00:08:36.668 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-05 00:08:36.668 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-05 00:08:36.670 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 00:08:36.673 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 3.1168ms
+2025-04-05 00:08:36.674 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-05 00:08:36.675 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 12.9475ms
+2025-04-05 00:08:42.183 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-05 00:08:42.185 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-05 00:08:42.186 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-05 00:08:42.188 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-05 00:08:42.190 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-05 00:08:42.194 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-05 00:08:42.195 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-05 00:08:42.197 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-05 00:08:42.198 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-05 00:08:42.198 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 00:08:42.200 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 12.2708ms
+2025-04-05 00:08:42.200 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-05 00:08:42.201 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 18.0225ms
+2025-04-05 00:09:59.901 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-05 00:09:59.905 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-05 00:09:59.906 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-05 00:09:59.908 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-05 00:09:59.909 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-05 00:09:59.914 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-05 00:09:59.915 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-05 00:09:59.917 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-05 00:09:59.918 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-05 00:09:59.918 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-05 00:09:59.921 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 13.4408ms
+2025-04-05 00:09:59.922 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-05 00:09:59.922 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 21.8448ms

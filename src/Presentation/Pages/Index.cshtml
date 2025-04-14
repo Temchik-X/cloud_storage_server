@@ -1,0 +1,214 @@
+﻿@page
+@using System.Security.Claims
+@model Presentation.Pages.IndexModel
+@{
+    ViewData["Title"] = "Управление дисковым пространством";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- Подключение CSS -->
+</head>
+<body>
+    <div class="header-container">
+        <div class="centered-title">
+            <h2>Управление дисковым пространством</h2>
+        </div>
+        @if (Model.UserRole != null){
+            <button id="logoutButton">Выход</button>
+        }
+    </div>
+    @if (Model.UserRole == null)
+    {
+        <!-- Форма логина -->
+        <div class="login-form">
+            <h3>Аутентификация</h3>
+            <form id="loginForm">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Войти</button>
+            </form>
+        </div>
+    }
+    @if (Model.UserRole == "Admin")
+    {   <div class="system-info-container">
+            <h3>Общая информация о системе</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="info-label">Количество дисков:</span>
+                    <span id="disk-count">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Общий объем дисков:</span>
+                    <span id="general-disk-space">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Свободное место:</span>
+                    <span id="general-free-space">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Количество файлов:</span>
+                    <span id="general-file-count">-</span>
+                </div>
+            </div>
+        
+            <!-- Линейная диаграмма -->
+            <div class="chart-container">
+                <h4>Использование дискового пространства</h4>
+                <div class="bar-chart">
+                    <div id="used-space-bar" class="bar used"></div>
+                    <div id="free-space-bar" class="bar free"></div>
+                </div>
+                <div class="chart-labels">
+                    <span id="used-space-label">Загрузка...</span>
+                    <span id="free-space-label">Загрузка...</span>
+                </div>
+            </div>
+        </div>  
+        <!-- Список подключенных дисков -->
+        <div class="disk-list">
+            <h3>Список подключенных дисков</h3>
+            <table id="connectedDirectoriesTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Количество файлов</th>
+                        <th>Использованное пространство</th>
+                        <th>Свободное пространство</th>
+                        <th>Описание</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Здесь будут отображаться строки с подключенными дисками и папками -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Контейнер для кнопок -->
+        <div class="button-container">
+            <button id="addDrivesButton">Добавить диск</button>
+            <button id="refreshDrivesButton">Обновить список дисков</button>
+            <button id="addUserButton">Добавить пользователя</button>
+            <button id="refreshUsersButton">Обновить список пользователей</button>
+            <button onclick="indexFiles()">Запустить индексацию</button>
+        </div>
+
+        <!-- Модальные окна -->
+        <div class="modal-overlay" id="modalOverlay">
+            <!-- Добавление директории -->
+            <div id="addDrivesForm" class="modal-window">
+                <label for="directoryNameInput">
+                    Введите директорию для хранения (используйте формат для вашей ОС):
+                </label>
+                <p id="directoryrNameHelp" style="font-size: 0.9em; color: gray;">
+                    ⚠️ Для Windows: укажите путь вида <b>C:\\Users\\Имя\\Папка</b>. <br>
+                    ⚠️ Для Linux/Mac: укажите путь вида <b>/home/user/folder</b>.
+                </p>
+                <input type="text" id="directoryNameInput" placeholder="Пример: C:\\MediaStorage\\Data; D:\\ (Windows) или /home/storage/data (Linux/Mac)" />
+                <button id="addDirectoryButton">Добавить папку</button>
+                <button type="button" id="cancelAddDrives">Отмена</button>
+            </div>
+            <!-- Форма редактирования описания директории -->
+            <div id="editDescriptionForm" class="modal-window">
+                <h3>Редактировать описание директории</h3>
+                <form id="editDescriptionform">
+                    <label for="descriptionInput">Описание:</label>
+                    <input type="text" id="descriptionInput" name="description" required>
+                    <button type="submit">Обновить</button>
+                    <button type="button" id="cancelEditDescription">Отмена</button>
+                </form>
+            </div>
+
+            <!-- Форма для добавления пользователя -->
+            <div id="addUserForm" class="modal-window">
+                <h4>Добавление пользователя</h4>
+                <label for="newUsername">Имя пользователя:</label>
+                <input type="text" id="newUsername" required>
+                <label for="newEmail">Эл. почта:</label>
+                <input type="text" id="newEmail" required>
+                <label for="newPassword">Пароль:</label>
+                <input type="password" id="newPassword" required>
+                <label for="newRole">Роль:</label>
+                <select id="newRole">
+                    <option value="user">Пользователь</option>
+                    <option value="admin">Администратор</option>
+                </select>
+                <button id="submitAddUser">Добавить</button>
+                <button id="cancelAddUser">Отмена</button>
+            </div>
+
+            <!-- Форма для изменения пароля -->
+            <div id="changePasswordForm" class="modal-window">
+                <h4>Изменение пароля</h4>
+                <label for="userIdForPassword">ID пользователя:</label>
+                <input type="text" id="userIdForPassword" readonly>
+                <label for="newPasswordForUser">Новый пароль:</label>
+                <input type="password" id="newPasswordForUser" required>
+                <button id="submitChangePassword">Сохранить</button>
+                <button id="cancelChangePassword">Отмена</button>
+            </div>
+        </div>
+
+        <!-- Управление пользователями -->
+        <div class="user-management">
+            <h3>Управление пользователями</h3>
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя пользователя</th>
+                        <th>Роль</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Здесь будут отображаться строки с пользователями -->
+                </tbody>
+            </table>
+        </div>
+    }
+    @if (Model.UserRole == "User")
+    {
+        <h3>403 Недостаточно прав</h3>
+        <button id="logoutButton">Выход</button>
+        <script>
+            //Удаление токена из куки
+            document.getElementById('logoutButton').addEventListener('click', function () {
+                fetch('/api/auth/logout', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.message);
+                        window.location.reload(); // Перезагрузка страницы после выхода
+                    })
+                    .catch(error => {
+                        console.error("Ошибка при выходе:", error);
+                    });
+            });
+        </script>
+    }
+
+    @if (Model.UserRole == null)
+    {
+        <script src="~/js/guest.js" defer></script>
+    }
+    @if (Model.UserRole == "Admin")
+    {
+        <script src="~/js/admin.js" defer></script>
+    }
+</body>
+</html>

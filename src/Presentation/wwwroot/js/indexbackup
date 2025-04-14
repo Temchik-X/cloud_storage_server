@@ -1,0 +1,142 @@
+@page
+@using System.Security.Claims
+@model Presentation.Pages.IndexModel
+@{
+    ViewData["Title"] = "Управление дисковым пространством";
+    // Предполагается, что у вас есть доступ к данным пользователя через HttpContext
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/styles.css"> <!-- Подключение CSS -->
+</head>
+<body>
+    <h2>Управление дисковым пространством</h2>
+    @if (Model.UserRole == null)
+    {
+            <!-- Форма логина -->
+            <h3>Аутентификация</h3>
+            <form id="loginForm">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Войти</button>
+            </form>
+    }
+    @if (Model.UserRole == "Admin")
+    {
+        <!-- Добавление директории -->
+        <label for="directoryNameInput">
+            Введите директорию для хранения (используйте формат для вашей ОС):
+        </label>
+        <p id="directoryrNameHelp" style="font-size: 0.9em; color: gray;">
+            ⚠️ Для Windows: укажите путь вида <b>C:\\Users\\Имя\\Папка</b>. <br>
+            ⚠️ Для Linux/Mac: укажите путь вида <b>/home/user/folder</b>.
+        </p>
+        <input type="text" id="directoryNameInput" placeholder="Пример: C:\\MediaStorage\\Data; D:\\ (Windows) или /home/storage/data (Linux/Mac)" />
+        <button id="addDirectoryButton">Добавить папку</button>
+        <!-- Список подключенных дисков -->
+        <h3>Список подключенных дисков</h3>
+        <table id="connectedDirectoriesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Имя</th>
+                    <th>Количество файлов</th>
+                    <th>Использованное пространство</th>
+                    <th>Свободное пространство</th>
+                    <th>Описание</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Здесь будут отображаться строки с подключенными дисками и папками -->
+            </tbody>
+        </table>
+        <button id="refreshDrivesButton">Обновить список дисков</button>
+        <div class="modal-overlay" id="modalOverlay">
+            <!-- Форма редактирование описания директории -->
+            <div id="editDescriptionForm" class="modal-window">
+                <h3>Редактировать описание директории</h3>
+                <form id="editDescriptionform">
+                    <label for="descriptionInput">Описание:</label>
+                    <input type="text" id="descriptionInput" name="description" required>
+                    <button type="submit">Обновить</button>
+                    <button type="button" id="cancelEditDescription">Отмена</button>
+                </form>
+            </div>
+            <!-- Форма для добавления пользователя -->
+            <div id="addUserForm" class="modal-window">
+                <h4>Добавление пользователя</h4>
+                <label for="newUsername">Имя пользователя:</label>
+                <input type="text" id="newUsername" required>
+                <label for="newEmail">Эл. почта:</label>
+                <input type="text" id="newEmail" required>
+                <label for="newPassword">Пароль:</label>
+                <input type="password" id="newPassword" required>
+                <label for="newRole">Роль:</label>
+                <select id="newRole">
+                    <option value="user">Пользователь</option>
+                    <option value="admin">Администратор</option>
+                </select>
+                <button id="submitAddUser">Добавить</button>
+                <button id="cancelAddUser">Отмена</button>
+            </div>
+            <!-- Форма для изменения пароля -->
+            <div id="changePasswordForm" class="modal-window">
+                <h4>Изменение пароля</h4>
+                <label for="userIdForPassword">ID пользователя:</label>
+                <input type="text" id="userIdForPassword" readonly>
+                <label for="newPasswordForUser">Новый пароль:</label>
+                <input type="password" id="newPasswordForUser" required>
+                <button id="submitChangePassword">Сохранить</button>
+                <button id="cancelChangePassword">Отмена</button>
+            </div>
+        </div>
+        <!-- Индексация -->
+        <h3>Индексация</h3>
+        <button onclick="indexFiles()">Запустить</button>
+        <!-- Управление пользователями -->
+        <h3>Управление пользователями</h3>
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Имя пользователя</th>
+                    <th>Роль</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Здесь будут отображаться строки с пользователями -->
+            </tbody>
+        </table>
+        <button id="addUserButton">Добавить пользователя</button>
+        <button id="refreshUsersButton">Обновить список пользователей</button>
+        
+        <div>
+            <label>Выход из пользователя</label>
+            <button id="logoutButton">Выход</button>
+        </div>
+    }
+    @if (Model.UserRole == "User")
+    {
+        <h3>403 Недостаточно прав</h3>
+    }
+    @if (Model.UserRole == null)
+    {
+        <script src="~/js/guest.js" defer></script>
+    }
+    @if (Model.UserRole == "Admin")
+    {
+      <script src="~/js/admin.js" defer></script>
+    }
+</body>
+</html>

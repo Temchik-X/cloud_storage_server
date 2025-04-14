@@ -1,0 +1,660 @@
+2025-04-04 14:45:09.731 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-04 14:45:10.367 +03:00 [INF] Применение миграций, если они есть
+2025-04-04 14:45:11.497 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-04 14:45:11.566 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-04 14:45:11.687 +03:00 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-04 11:45:11.5724969+00:00');
+SELECT changes();
+2025-04-04 14:45:11.729 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-04 14:45:11.738 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-04 14:45:11.742 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-04 14:45:11.749 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-04 14:45:11.786 +03:00 [INF] Executed DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-04 14:45:11.965 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-04-04 14:45:11.967 +03:00 [INF] Инициализация завершена
+2025-04-04 14:45:11.969 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-04-04 14:45:12.002 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.009 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.011 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.012 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.014 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.017 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.019 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.022 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.025 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.027 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.030 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.031 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.033 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.035 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.037 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.039 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.041 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.043 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 14:45:12.045 +03:00 [INF] Стандартные икноки загружены успешно
+2025-04-04 14:45:12.278 +03:00 [INF] Now listening on: https://localhost:7067
+2025-04-04 14:45:12.279 +03:00 [INF] Now listening on: http://localhost:5090
+2025-04-04 14:45:12.280 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-04 14:45:12.281 +03:00 [INF] Hosting environment: Development
+2025-04-04 14:45:12.282 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-04-04 14:45:13.696 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-04-04 14:45:15.067 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1391.0134ms
+2025-04-04 14:45:15.095 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-04 14:45:15.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.2204ms
+2025-04-04 14:45:15.138 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-04-04 14:45:15.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.5322ms
+2025-04-04 14:47:09.023 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5090/api/auth/check - null null
+2025-04-04 14:47:09.037 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5090/api/auth/check - 307 0 null 13.8697ms
+2025-04-04 14:47:09.079 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 14:47:09.976 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 14:47:09.988 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 14:47:09.996 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 14:47:10.008 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 16.0185ms
+2025-04-04 14:47:10.008 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 14:47:10.010 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 931.0479ms
+2025-04-04 14:47:35.611 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 14:47:35.613 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 14:47:35.614 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 14:47:35.617 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 14:47:35.618 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 2.333ms
+2025-04-04 14:47:35.619 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 14:47:35.619 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 8.3012ms
+2025-04-04 21:15:06.145 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 21:15:06.154 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 21:15:06.156 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 21:15:06.172 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 21:15:06.174 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 14.6977ms
+2025-04-04 21:15:06.175 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 21:15:06.176 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 32.4447ms
+2025-04-04 22:07:28.328 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-04 22:07:28.538 +03:00 [INF] Применение миграций, если они есть
+2025-04-04 22:07:29.023 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-04 22:07:29.042 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-04 22:07:29.118 +03:00 [INF] Executed DbCommand (70ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-04 19:07:29.0470732+00:00');
+SELECT changes();
+2025-04-04 22:07:29.158 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-04 22:07:29.168 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-04 22:07:29.171 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-04 22:07:29.178 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-04 22:07:29.202 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-04 22:07:29.344 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-04-04 22:07:29.346 +03:00 [INF] Инициализация завершена
+2025-04-04 22:07:29.347 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-04-04 22:07:29.378 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.382 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.384 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.385 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.387 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.389 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.391 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.393 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.394 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.397 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.399 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.400 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.402 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.404 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.406 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.408 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.410 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.412 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.414 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 22:07:29.416 +03:00 [INF] Стандартные икноки загружены успешно
+2025-04-04 22:07:29.601 +03:00 [INF] Now listening on: https://localhost:7067
+2025-04-04 22:07:29.602 +03:00 [INF] Now listening on: http://localhost:5090
+2025-04-04 22:07:29.603 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-04 22:07:29.603 +03:00 [INF] Hosting environment: Development
+2025-04-04 22:07:29.604 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-04-04 22:07:30.513 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-04-04 22:07:32.476 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1968.1307ms
+2025-04-04 22:07:32.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-04 22:07:32.507 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 6.1021ms
+2025-04-04 22:07:32.545 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-04-04 22:07:32.604 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.4875ms
+2025-04-04 22:07:35.559 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 22:07:35.603 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:07:35.615 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 22:07:35.622 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 22:07:35.641 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 22.1539ms
+2025-04-04 22:07:35.642 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:07:35.644 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 84.7027ms
+2025-04-04 22:10:55.227 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 22:10:55.230 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:10:55.231 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 22:10:55.235 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 22:10:55.236 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 2.7531ms
+2025-04-04 22:10:55.237 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:10:55.238 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 11.1198ms
+2025-04-04 22:21:59.084 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 22:21:59.087 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:21:59.088 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 22:22:16.081 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 22:22:16.082 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 16993.8409ms
+2025-04-04 22:22:16.083 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:22:16.084 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 17001.3314ms
+2025-04-04 22:22:18.790 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 22:22:18.792 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:22:18.792 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 22:22:18.794 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 22:22:18.795 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 1.2869ms
+2025-04-04 22:22:18.796 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 22:22:18.797 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 7.0124ms
+2025-04-04 22:58:14.685 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 61
+2025-04-04 22:58:14.689 +03:00 [INF] CORS policy execution successful.
+2025-04-04 22:58:14.690 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 22:58:14.699 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 22:58:14.718 +03:00 [INF] Получен запрос на вход пользователя: string
+2025-04-04 22:58:14.764 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 22:58:14.767 +03:00 [ERR] Пользователь не найден.
+2025-04-04 22:58:14.767 +03:00 [WRN] Неудачная попытка входа пользователя: string
+2025-04-04 22:58:14.769 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-04-04 22:58:14.770 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 69.5055ms
+2025-04-04 22:58:14.771 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 22:58:14.774 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 401 null text/plain; charset=utf-8 88.3468ms
+2025-04-04 23:11:41.413 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 58
+2025-04-04 23:11:41.417 +03:00 [INF] CORS policy execution successful.
+2025-04-04 23:11:41.418 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:11:41.419 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:11:41.422 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:11:41.452 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:11:41.498 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:11:41.506 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:11:41.512 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:11:41.533 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:11:41.536 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:11:41.538 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 116.7258ms
+2025-04-04 23:11:41.539 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:11:41.539 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 128.3379ms
+2025-04-04 23:25:40.980 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 23:25:40.982 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:25:40.983 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:25:40.985 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:25:40.986 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 1.4908ms
+2025-04-04 23:25:40.987 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:25:40.988 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 7.6703ms
+2025-04-04 23:28:15.562 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 23:28:15.564 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:28:15.565 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:28:15.567 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:28:15.568 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 1.4642ms
+2025-04-04 23:28:15.568 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:28:15.569 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 6.8818ms
+2025-04-04 23:28:49.453 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-04 23:28:49.622 +03:00 [INF] Применение миграций, если они есть
+2025-04-04 23:28:50.075 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-04-04 23:28:50.093 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-04-04 23:28:50.174 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-04-04 20:28:50.0987848+00:00');
+SELECT changes();
+2025-04-04 23:28:50.214 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-04-04 23:28:50.224 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-04-04 23:28:50.228 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-04-04 23:28:50.234 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-04-04 23:28:50.273 +03:00 [INF] Executed DbCommand (38ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-04-04 23:28:50.405 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-04-04 23:28:50.407 +03:00 [INF] Инициализация завершена
+2025-04-04 23:28:50.409 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-04-04 23:28:50.440 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.444 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.447 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.449 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.451 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.453 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.455 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.456 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.458 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.460 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.462 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.463 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.465 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.467 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.469 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.470 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.472 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.474 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.476 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-04-04 23:28:50.477 +03:00 [INF] Стандартные икноки загружены успешно
+2025-04-04 23:28:50.620 +03:00 [INF] Now listening on: https://localhost:7067
+2025-04-04 23:28:50.621 +03:00 [INF] Now listening on: http://localhost:5090
+2025-04-04 23:28:50.622 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-04-04 23:28:50.623 +03:00 [INF] Hosting environment: Development
+2025-04-04 23:28:50.623 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-04-04 23:28:51.202 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-04-04 23:28:52.532 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1336.6648ms
+2025-04-04 23:28:52.555 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-04-04 23:28:52.560 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.9783ms
+2025-04-04 23:28:52.596 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-04-04 23:28:52.661 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 65.0324ms
+2025-04-04 23:33:59.646 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:33:59.694 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:33:59.709 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:33:59.731 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:33:59.773 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:33:59.816 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:33:59.823 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:33:59.829 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:33:59.847 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:33:59.852 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:33:59.864 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 151.8193ms
+2025-04-04 23:33:59.865 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:33:59.868 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 222.2815ms
+2025-04-04 23:45:52.150 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:45:52.154 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:45:52.155 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:45:52.158 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:45:52.189 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:45:52.194 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:45:52.195 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:45:52.197 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:45:52.198 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:45:52.199 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:45:52.200 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 44.2182ms
+2025-04-04 23:45:52.201 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:45:52.202 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 51.7841ms
+2025-04-04 23:46:06.445 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:46:06.448 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:46:06.448 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:46:06.451 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:46:06.453 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:46:06.459 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:46:06.459 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:46:06.462 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:46:06.462 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:46:06.463 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:46:06.465 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 15.5057ms
+2025-04-04 23:46:06.466 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:46:06.467 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 22.4424ms
+2025-04-04 23:46:54.976 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:46:54.978 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:46:54.978 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:46:54.980 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:46:54.981 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:46:54.986 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:46:54.987 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:46:54.989 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:46:54.990 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:46:54.990 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:46:54.992 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 11.6122ms
+2025-04-04 23:46:54.992 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:46:54.993 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 17.6357ms
+2025-04-04 23:58:57.975 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 23:58:57.977 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:58:57.979 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:58:57.981 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:58:57.983 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 2.3028ms
+2025-04-04 23:58:57.984 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:58:57.985 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 10.1664ms
+2025-04-04 23:59:03.354 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:59:03.355 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:03.356 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:59:03.358 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:59:03.361 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:59:03.366 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:59:03.367 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:59:03.369 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:59:03.370 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:59:03.371 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:59:03.372 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 14.4124ms
+2025-04-04 23:59:03.374 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:03.375 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 21.6021ms
+2025-04-04 23:59:06.506 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/auth/check - null null
+2025-04-04 23:59:06.508 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:59:06.508 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:59:06.510 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:59:06.512 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 1.6206ms
+2025-04-04 23:59:06.512 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-04-04 23:59:06.513 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 7.2045ms
+2025-04-04 23:59:12.882 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 43
+2025-04-04 23:59:12.883 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:12.884 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:59:12.886 +03:00 [INF] Получен запрос на вход пользователя: asfgds
+2025-04-04 23:59:12.887 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:59:12.889 +03:00 [ERR] Пользователь не найден.
+2025-04-04 23:59:12.890 +03:00 [WRN] Неудачная попытка входа пользователя: asfgds
+2025-04-04 23:59:12.892 +03:00 [INF] Executing UnauthorizedObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:59:12.893 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 7.6936ms
+2025-04-04 23:59:12.894 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:12.895 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 401 null application/json; charset=utf-8 13.7979ms
+2025-04-04 23:59:19.185 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/auth/login - application/json; charset=utf-8 38
+2025-04-04 23:59:19.186 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:19.187 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-04-04 23:59:19.189 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-04-04 23:59:19.190 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:59:19.194 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-04-04 23:59:19.195 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-04-04 23:59:19.197 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:59:19.198 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-04-04 23:59:19.198 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-04 23:59:19.200 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 11.0806ms
+2025-04-04 23:59:19.201 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-04-04 23:59:19.202 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 16.9123ms

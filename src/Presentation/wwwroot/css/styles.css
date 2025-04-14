@@ -1,0 +1,345 @@
+﻿/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+h2 {
+    text-align: center;
+}
+
+h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+input[type="text"], input[type="password"] {
+    width: 97%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+button {
+    padding: 10px 15px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Стиль для таблиц */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+table th, table td {
+    border: none;
+    padding: 12px;
+    text-align: center;
+
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Плиточный формат для кнопок */
+.button-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button-container button {
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 15px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button-container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Улучшенный стиль для модальных окон */
+.modal-window {
+    display: none; /* По умолчанию скрыто */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 400px; /* Увеличенная ширина */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-window h3, .modal-window h4 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.modal-window label {
+    margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.modal-window input[type="text"], .modal-window input[type="password"], .modal-window select {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.modal-window input[type="text"]:focus, .modal-window input[type="password"]:focus, .modal-window select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modal-window button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 6px;
+}
+
+.modal-window button:hover {
+    background-color: #0056b3;
+}
+
+/* Анимация появления модального окна */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Дополнительные улучшения */
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+#directoryrNameHelp {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: gray;
+}
+.login-form {
+    max-width: 30em;
+    margin: auto;
+}
+/* Стили для группировки функциональных блоков */
+.login-form, .directory-section, .disk-list, .user-management {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.login-form h3, .directory-section h3, .disk-list h3, .user-management h3 {
+    margin-top: 0; /* Убираем отступ сверху для заголовков внутри блоков */
+    color: #2c3e50;
+}
+
+.directory-section label, .user-management label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+.directory-section input[type="text"], .user-management input[type="text"] {
+    width: 97%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.directory-section button, .user-management button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.directory-section button:hover, .user-management button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для контейнера заголовка и кнопки */
+.header-container {
+    position: relative; /* Для позиционирования кнопки внутри контейнера */
+    text-align: center; /* Центрируем заголовок по центру */
+    margin-bottom: 20px; /* Отступ снизу для разделения от остального контента */
+}
+
+.header-container h2 {
+    margin: 0; /* Убираем стандартные отступы у заголовка */
+    color: #2c3e50;
+    display: inline-block; /* Заголовок становится строчным блоком для корректного центрирования */
+}
+
+.header-container button {
+    position: absolute; /* Абсолютное позиционирование кнопки */
+    top: 30%; /* Выравниваем по вертикали */
+    right: 20px; /* Отступ справа */
+    transform: translateY(-50%); /* Корректируем положение по вертикали */
+    padding: 10px 15px;
+    font-size: 1rem;
+    background-color: #e74c3c; /* Красный цвет для кнопки выхода */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-container button:hover {
+    background-color: #c0392b; /* Темно-красный при наведении */
+}
+/* Стиль для контейнера информации */
+.system-info-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.info-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.info-item span:last-child {
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+/* Стиль для контейнера диаграммы */
+.chart-container {
+    margin-top: 20px;
+}
+
+.bar-chart {
+    display: flex;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+
+.bar {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.used {
+    background-color: #f44336; /* Красный для занятого места */
+}
+
+.free {
+    background-color: #4caf50; /* Зеленый для свободного места */
+}
+
+.chart-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}

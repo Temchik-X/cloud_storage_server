@@ -1,0 +1,11 @@
+# .NET build files
+.vs/
+obj/
+src/Application/bin/
+src/Application/obj/
+src/Presentation/bin/
+src/Presentation/obj/
+
+# Temporary or generated data
+data/
+storage/
