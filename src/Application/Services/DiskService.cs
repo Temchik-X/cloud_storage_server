@@ -145,7 +145,7 @@ namespace Application.Services
         // ПЕРЕДЕЛАТЬ
         public async Task<string> IndexFiles()
         {
-            var disks = await _context.Disks.ToListAsync();
+            var disks = await _diskSpaceService.GetDirectoriesAsync();
             if (!disks.Any())
             {
                 _logger.LogWarning("Нет доступных файлов для индексации.");
@@ -155,13 +155,13 @@ namespace Application.Services
             var userFilesToAdd = new List<UserFileModel>();
             foreach (var disk in disks)
             {
-                if (!Directory.Exists(disk.Name))
+                if (!Directory.Exists(disk.Path))
                 {
-                    _logger.LogWarning($"Директория больше не существует: {disk.Name}");
+                    _logger.LogWarning($"Директория больше не существует: {disk.Path}");
                     continue;
                 }
                 // Получаем минимально требуемую информацию о файлах (путь и имя)
-                var filePaths = Directory.GetFiles(disk.Name);
+                var filePaths = Directory.GetFiles(disk.Path);
                 foreach (var filePath in filePaths) 
                 {
                     var fileName = Path.GetFileName(filePath);
@@ -174,7 +174,7 @@ namespace Application.Services
                         {
                             FileName = fileName,
                             FilePath = filePath,
-                            DiskId = disk.Id,
+                            DiskId = disk.DiskId,
                             Size = fileInfo.Length,
                             FileType = Path.GetExtension(filePath).ToLower(),
                             CreatedAt = File.GetCreationTime(filePath),

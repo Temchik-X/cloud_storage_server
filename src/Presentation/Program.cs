@@ -59,6 +59,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+//для докер-контейнера
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8080); // HTTP
@@ -67,6 +68,8 @@ builder.WebHost.ConfigureKestrel(options =>
         listenOptions.UseHttps("/https/aspnetapp.pfx", "1234");
     });
 });
+
+
 
 // Добавляем поддержку Windows-службы
 builder.Host.UseWindowsService();
