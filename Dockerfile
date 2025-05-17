@@ -14,7 +14,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 
 # Создаём нужные директории
-RUN mkdir -p /app/Data && mkdir -p /app/storage && mkdir -p /app/Data/DefaultIcons
+RUN mkdir -p /app/Data && mkdir -p /app/storage && mkdir -p /app/Data/DefaultIcons && mkdir -p /app/Data/Logs
 
 # Копируем иконки
 COPY src/Application/Data/DefaultIcons /app/Data/DefaultIcons

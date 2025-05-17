@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Net.Http.Headers;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.StaticFiles;
 
 namespace Presentation.Controllers
 {
@@ -19,23 +20,25 @@ namespace Presentation.Controllers
         private readonly UserService _userService;
         private readonly ILogger<FileController> _logger;
         private readonly IconService _iconService;
+        private readonly FileExtensionContentTypeProvider _contentTypeProvider;
 
-        public FileController(FileService fileService, UserService userService, ILogger<FileController> logger, IconService iconService)
+        public FileController(FileService fileService, UserService userService, ILogger<FileController> logger, IconService iconService, FileExtensionContentTypeProvider contentTypeProvider)
         {
             _fileService = fileService;
             _userService = userService;
             _logger = logger;
             _iconService = iconService;
+            _contentTypeProvider = contentTypeProvider;
         }
 
         [HttpGet("list")]
-        public async Task<IActionResult> GetFilesList()
+        public async Task<IActionResult> GetFilesList(bool? isDeleted = false)
         {
             _logger.LogInformation("Получен запрос на получение списка файлов.");
             try
             {
                 var userId = _userService.GetCurrentUserId();
-                var result = await _fileService.GetFilesList(userId);
+                var result = await _fileService.GetFilesList(userId, isDeleted);
                 return Ok(result);
             }
             catch (InvalidOperationException ex)
@@ -46,6 +49,86 @@ namespace Presentation.Controllers
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Ошибка при обработке запроса на получение списка файлов.");
+                return StatusCode(500, "Внутренняя ошибка сервера.");
+            }
+        }
+        [HttpGet("video/{id:int}")]
+        public async Task<IActionResult> GetStreamVideo(int id)
+        {
+            _logger.LogInformation("Получен запрос на стриминг видео. FileId={FileId}", id);
+
+            try
+            {
+                var userId = _userService.GetCurrentUserId();
+                var result = await _fileService.GetStreamVideoAsync(userId, id);
+
+                if (!System.IO.File.Exists(result.FilePath))
+                    return NotFound("Файл физически не найден.");
+                // Попробуем получить корректный MIME по расширению
+                if (!_contentTypeProvider.TryGetContentType(result.FilePath, out var contentType))
+                {
+                    // fallback на переданный или на binary
+                    contentType = !string.IsNullOrEmpty(result.ContentType)
+                        ? result.ContentType
+                        : "application/octet-stream";
+                }
+                // enableRangeProcessing = true включает поддержку Range-запросов
+                return PhysicalFile(
+                    result.FilePath,
+                    contentType,
+                    result.FileName,
+                    enableRangeProcessing: true);
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex, "Попытка доступа к несуществующему или удалённому файлу. FileId={FileId}", id);
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при стриминге видео. FileId={FileId}", id);
+                return StatusCode(500, "Внутренняя ошибка сервера.");
+            }
+        }
+        [HttpPost("restore-many-files")]
+        public async Task<IActionResult> RestoreManyAsync(List<int> ids)
+        {
+            _logger.LogInformation("Получен запрос на восстановление файлов.");
+            try
+            {
+                var userId = _userService.GetCurrentUserId();
+                await _fileService.RestoreManyAsync(userId, ids);
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex.Message);
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при обработке запроса на восстановление файлов.");
+                return StatusCode(500, "Внутренняя ошибка сервера.");
+            }
+        }
+        [HttpPost("permanently-delete-files")]
+        public async Task<IActionResult> PermanentlyDeleteManyAsync(List<int> ids)
+        {
+            _logger.LogInformation("Получен запрос на восстановление файлов.");
+            try
+            {
+                var userId = _userService.GetCurrentUserId();
+                await _fileService.PermanentlyDeleteManyAsync(userId, ids);
+                return Ok();
+            }
+            catch (InvalidOperationException ex)
+            {
+                _logger.LogWarning(ex.Message);
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при обработке запроса на восстановление файлов.");
                 return StatusCode(500, "Внутренняя ошибка сервера.");
             }
         }
@@ -200,5 +283,6 @@ namespace Presentation.Controllers
                 return StatusCode(500, "Внутренняя ошибка сервера.");
             }
         }
+
     }
 }

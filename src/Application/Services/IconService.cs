@@ -23,14 +23,16 @@ namespace Application.Services
         private readonly IServiceProvider _serviceProvider;
         private readonly IConfiguration _configuration;
         private readonly ILogger<IconService> _logger;
+        private readonly IIconGenerationQueue _iconQueue;
         private int folderIconId { get; set; } 
 
-        public IconService(ApplicationDbContext context, IConfiguration configuration, IServiceProvider serviceProvider, ILogger<IconService> logger)
+        public IconService(ApplicationDbContext context, IConfiguration configuration, IServiceProvider serviceProvider, ILogger<IconService> logger, IIconGenerationQueue iconQueue)
         {
             _context = context;
             _configuration = configuration;
             _serviceProvider = serviceProvider;
             _logger = logger;
+            _iconQueue = iconQueue;
             folderIconId = _context.FileIcons.FirstOrDefault(i => i.FileType == ".folder")?.Id ?? 0; // Получаем ID иконки для папки
         }
         public int GetFolderIconIdAsync()
@@ -206,22 +208,9 @@ namespace Application.Services
         }
         public void ScheduleIconGeneration(FileModel file)
         {
-            _ = Task.Run(async () =>
-            {
-                _logger.LogInformation($"Поиск или создание иконки для {file.Id}");
-                using var scope = _serviceProvider.CreateScope();
-                var scopedContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                var scopedIconService = scope.ServiceProvider.GetRequiredService<IconService>();
-
-                var iconId = await scopedIconService.GetOrCreateIconAsync(file);
-
-                if (file != null)
-                {
-                    file.IconId = iconId;
-                    scopedContext.Files.Update(file);
-                    await scopedContext.SaveChangesAsync();
-                }
-            });
+            _logger.LogInformation("Запланирована генерация иконки для {FileId}", file.Id);
+            // Просто кладём запрос в очередь, дальше займётся BackgroundService
+            _ = _iconQueue.EnqueueAsync(file);
         }
 
         public async Task<string> ConvertToHeic(string filePath)

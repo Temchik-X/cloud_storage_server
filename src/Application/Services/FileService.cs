@@ -23,21 +23,20 @@ namespace Application.Services
             _iconService = iconService;
         }
 
-        public async Task<object> GetFilesList(int userId)
+        public async Task<object> GetFilesList(int userId, bool? isDeleted = false)
         {
             try
             {
                 var files = await _context.UserFiles
-                    .Where(uf => uf.UserId == userId) // Фильтруем по UserId и IsDeleted
-                    .Select(uf => new
+                    .Where(uf => uf.UserId == userId && uf.File.IsDeleted == isDeleted) // Фильтруем по UserId и IsDeleted
+                    .Select(uf => new FileDto
                     {
-                        uf.File.Id,
-                        uf.File.FileName,
-                        uf.File.Size,
-                        uf.File.FileType,
-                        uf.File.CreatedAt,
-                        uf.File.UpdatedAt,
-                        uf.File.FilePath
+                        Id = uf.File.Id,
+                        FileName = uf.File.FileName,
+                        Size = uf.File.Size,
+                        FileType = uf.File.FileType,
+                        CreatedAt = uf.File.CreatedAt,
+                        IconId = uf.File.IconId
                     })
                     .ToListAsync();
 
@@ -56,12 +55,109 @@ namespace Application.Services
                 throw;
             }
         }
+        public async Task<StreamVideoResult> GetStreamVideoAsync(int userId, int id)
+        {
+            // Проверяем, что файл принадлежит пользователю и не удалён
+            var file = await _context.UserFiles
+                .Include(uf => uf.File)
+                .Where(uf => uf.UserId == userId && uf.File.Id == id && !uf.File.IsDeleted)
+                .Select(uf => uf.File)
+                .FirstOrDefaultAsync();
+
+            if (file == null)
+                throw new InvalidOperationException("Файл не найден или недоступен.");
+
+            // Предполагаем, что FilePath хранит полный путь
+            return new StreamVideoResult
+            {
+                FilePath = file.FilePath,
+                ContentType = file.FileType,   // например "video/mp4"
+                FileName = file.FileName
+            };
+        }
+        public async Task RestoreManyAsync(int userId, List<int> ids)
+        {
+            try
+            {
+                var files = await _context.UserFiles
+                    .Include(uf => uf.File)
+                    .Where(uf => uf.UserId == userId
+                                 && ids.Contains(uf.File.Id)
+                                 && uf.File.IsDeleted)
+                    .ToListAsync();
+
+                if (!files.Any())
+                {
+                    _logger.LogWarning("Не найдено удалённых файлов для восстановления. UserId={UserId}, Ids=[{Ids}]",
+                            userId, string.Join(",", ids));
+                    throw new InvalidOperationException("Нет удалённых файлов для восстановления.");
+                }
+
+                foreach (var uf in files)
+                {
+                    uf.File.IsDeleted = false;
+                    uf.File.FolderId = null;
+                    _context.Files.Update(uf.File);
+                }
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation("Восстановлено {Count} файлов для UserId={UserId}.", files.Count, userId);
+                return;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при получении списка файлов.");
+                throw;
+            }
+        }
+        public async Task PermanentlyDeleteManyAsync(int userId, List<int> ids)
+        {
+            try
+            {
+                var files = await _context.UserFiles
+                    .Include(uf => uf.File)
+                    .Where(uf => uf.UserId == userId
+                                 && ids.Contains(uf.File.Id)
+                                 && uf.File.IsDeleted)
+                    .ToListAsync();
+
+                if (!files.Any())
+                {
+                    _logger.LogWarning("Не найдено удалённых файлов для уничтожения. UserId={UserId}, Ids=[{Ids}]",
+                            userId, string.Join(",", ids));
+                    throw new InvalidOperationException("Нет удалённых файлов для уничтожения.");
+                }
+
+                foreach (var uf in files)
+                {
+                    if (System.IO.File.Exists(uf.File.FilePath))
+                    {
+                        System.IO.File.Delete(uf.File.FilePath);
+                        _logger.LogInformation($"Файл с ID {uf.File.Id} успешно удален с диска.");
+                    }
+                    _context.Files.Remove(uf.File);
+                }
+                await _context.SaveChangesAsync();
+
+                _logger.LogInformation("Уничтожено {Count} файлов для UserId={UserId}.", files.Count, userId);
+                return;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Ошибка при получении списка файлов.");
+                throw;
+            }
+        }
         public async Task<JsonRecord> DTOGetJsonRecordAsync(int userId, int? parentFolderId)
         {
             try
             {
                 _logger.LogInformation($"Начало получения директории пользователя с ID {userId}.");
                 var folderIconId = _iconService.GetFolderIconIdAsync();
+                var folderName = _context.Folders
+                    .Where(f => f.UserId == userId && f.Id == parentFolderId)
+                    .Select(f => f.Name)
+                    .FirstOrDefault();
                 // Загружаем корневые папки пользователя
                 var folders = await _context.Folders
                     .Where(f => f.UserId == userId && f.ParentFolderId == parentFolderId)
@@ -75,7 +171,7 @@ namespace Application.Services
                     })
                     .ToListAsync();
                 var files = await _context.UserFiles
-                    .Where(uf => uf.UserId == userId && uf.File.FolderId == parentFolderId) // Фильтруем по UserId и IsDeleted
+                    .Where(uf => uf.UserId == userId && uf.File.FolderId == parentFolderId && uf.File.IsDeleted == false) // Фильтруем по UserId и IsDeleted
                     .Select(uf => new FileDto
                     {
                         Id = uf.File.Id,
@@ -86,7 +182,7 @@ namespace Application.Services
                         IconId = uf.File.IconId
                     })
                     .ToListAsync();
-                var jsonRecord = new JsonRecord(folders, files);
+                var jsonRecord = new JsonRecord(folderName, folders, files);
 
                 _logger.LogInformation($"Директория пользователя с ID {userId} успешно загружена.");
                 return jsonRecord;
@@ -240,7 +336,8 @@ namespace Application.Services
                             FileType = Path.GetExtension(fileName).ToLower(),
                             CreatedAt = fileInfo.CreationTime,
                             UpdatedAt = DateTime.Now,
-                            Hash = await _diskSpaceService.GenerateFileHashAsync(filePath)
+                            Hash = await _diskSpaceService.GenerateFileHashAsync(filePath),
+                            IconId = 7,
                         };
 
                         filesToAdd.Add(newFile);
@@ -351,10 +448,11 @@ namespace Application.Services
                 }
                 if (System.IO.File.Exists(file.FilePath))
                 {
-                    System.IO.File.Delete(file.FilePath);
                     _logger.LogInformation($"Файл с ID {id} успешно удален с диска.");
                 }
-                _context.Files.Remove(file);
+                file.IsDeleted = true;
+                file.UpdatedAt = DateTime.Now;
+                _context.Files.Update(file);
                 await _context.SaveChangesAsync();
 
                 return "Файл успешно удалён.";

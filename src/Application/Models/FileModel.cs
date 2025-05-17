@@ -32,5 +32,6 @@ namespace Application.Models
         public int? IconId { get; set; }
         [ForeignKey("IconId")]
         public FileIcon? Icon { get; set; }
+        public bool IsDeleted { get; set; }
     }
 }

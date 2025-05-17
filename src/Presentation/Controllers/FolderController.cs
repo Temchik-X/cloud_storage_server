@@ -64,7 +64,7 @@ namespace Presentation.Controllers
         }
         
         // Удаление папки
-        [HttpDelete("{id:int}")]
+        [HttpDelete("delete/{id:int}")]
         public async Task<IActionResult> DeleteFolder(int id)
         {
             await _folderService.DeleteFolderAsync(id);

@@ -1,0 +1,154 @@
+2025-05-01 15:30:17.090 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-01 15:30:17.671 +03:00 [INF] Применение миграций, если они есть
+2025-05-01 15:30:18.814 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-05-01 15:30:18.842 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-05-01 15:30:19.002 +03:00 [INF] Executed DbCommand (128ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-05-01 12:30:18.8743336+00:00');
+SELECT changes();
+2025-05-01 15:30:19.054 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-05-01 15:30:19.064 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-05-01 15:30:19.068 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-05-01 15:30:19.075 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-05-01 15:30:19.119 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-05-01 15:30:19.324 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-05-01 15:30:19.327 +03:00 [INF] Инициализация завершена
+2025-05-01 15:30:19.329 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-05-01 15:30:19.363 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.366 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.368 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.370 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.372 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.373 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.375 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.377 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.378 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.380 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.382 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.384 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.386 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.387 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.389 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.391 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.393 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.395 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.396 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.398 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-01 15:30:19.400 +03:00 [INF] Стандартные икноки загружены успешно
+2025-05-01 15:30:19.654 +03:00 [INF] Now listening on: https://localhost:7067
+2025-05-01 15:30:19.655 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-01 15:30:19.656 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-01 15:30:19.657 +03:00 [INF] Hosting environment: Development
+2025-05-01 15:30:19.657 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-05-01 15:30:21.001 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-05-01 15:30:21.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 223.451ms
+2025-05-01 15:30:21.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_vs/browserLink - null null
+2025-05-01 15:30:21.244 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-01 15:30:21.251 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 7.5223ms
+2025-05-01 15:30:21.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_vs/browserLink - 200 null text/javascript; charset=UTF-8 89.5583ms
+2025-05-01 15:30:21.355 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-05-01 15:30:21.417 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 62.3745ms
+2025-05-01 15:30:27.465 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/access - null 0
+2025-05-01 15:30:27.469 +03:00 [INF] CORS policy execution successful.
+2025-05-01 15:30:28.406 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2025-05-01 15:30:28.410 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2025-05-01 15:30:28.412 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/access - 401 0 null 947.1317ms
+2025-05-01 15:30:33.852 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/auth/check - null null
+2025-05-01 15:30:33.858 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-05-01 15:30:33.870 +03:00 [INF] Route matched with {action = "Check", controller = "Auth", page = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Check() on controller Presentation.Controllers.AuthController (Presentation).
+2025-05-01 15:30:33.878 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-01 15:30:33.891 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Check (Presentation) in 16.5996ms
+2025-05-01 15:30:33.892 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Check (Presentation)'
+2025-05-01 15:30:33.893 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/auth/check - 200 null application/json; charset=utf-8 40.6956ms

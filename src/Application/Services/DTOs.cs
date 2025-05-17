@@ -78,12 +78,20 @@ namespace Application.Services
     }
     public class JsonRecord
     {
+        public string Name { get; set; } = string.Empty;
         public ICollection<FolderInfoDto> Folders { get; set; } = new List<FolderInfoDto>();
         public ICollection<FileDto> Files { get; set; } = new List<FileDto>();
-        public JsonRecord(List<FolderInfoDto> folders, List<FileDto> files) {
+        public JsonRecord(string folderName, List<FolderInfoDto> folders, List<FileDto> files) {
+            Name = folderName;
             Folders = folders; 
             Files = files;
         }
 
+    }
+    public class StreamVideoResult
+    {
+        public string FilePath { get; set; }    // полный путь к файлу на диске
+        public string ContentType { get; set; } // например "video/mp4"
+        public string FileName { get; set; }    // название файла для заголовка Content-Disposition
     }
 }

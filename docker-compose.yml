@@ -9,5 +9,6 @@ services:
     volumes:
       - ./data:/app/Data
       - ./storage:/app/storage
+      - ./certs:/https
     environment:
       - ASPNETCORE_ENVIRONMENT=Production

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Application.Data;
 using Application.Services;
 using Serilog;
+using Microsoft.AspNetCore.StaticFiles;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -21,6 +22,11 @@ builder.Services.AddScoped<IconService>(); // Регистрация FileIconService
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<DatabaseInitializer>();
+
+builder.Services.AddSingleton<IIconGenerationQueue, IconGenerationQueue>();
+builder.Services.AddHostedService<IconGenerationHostedService>();
+
+builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -60,14 +66,14 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 //для докер-контейнера
-builder.WebHost.ConfigureKestrel(options =>
+/*builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8080); // HTTP
     options.ListenAnyIP(443, listenOptions =>
     {
         listenOptions.UseHttps("/https/fullchain.pem", "/https/privkey.pem");
     });
-});
+});*/
 
 
 
@@ -94,13 +100,16 @@ builder.Services.AddCors(options =>
         policy
             .AllowAnyOrigin()
             .AllowAnyMethod()
-            .AllowAnyHeader();
+            .AllowAnyHeader()
+            .WithExposedHeaders("Content-Range", "Accept-Ranges");
     });
 });
 
 // Настройка подключения к базе данных
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
+
+builder.Services.AddHostedService<FileCleanupService>();
 
 // Добавляем аутентификацию
 builder.Services.AddAuthentication(options =>

@@ -216,11 +216,12 @@ namespace Application.Services
 
                 foreach (var file in folder.Files.ToList())
                 {
-                    _context.Files.Remove(file);
+                    file.IsDeleted = true;
+                    file.UpdatedAt = DateTime.Now;
+                    _context.Files.Update(file);
 
                     if (System.IO.File.Exists(file.FilePath))
                     {
-                        System.IO.File.Delete(file.FilePath);
                         _logger.LogInformation($"Файл с ID {file.Id} успешно удален с диска.");
                     }
                     else
