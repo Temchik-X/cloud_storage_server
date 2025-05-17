@@ -71,7 +71,7 @@ builder.WebHost.ConfigureKestrel(options =>
     options.ListenAnyIP(8080); // HTTP
     options.ListenAnyIP(443, listenOptions =>
     {
-        listenOptions.UseHttps("/https/fullchain.pem", "/https/privkey.pem");
+        listenOptions.UseHttps("/https/aspnetapp.pfx", "certapistrngpass");
     });
 });
 
