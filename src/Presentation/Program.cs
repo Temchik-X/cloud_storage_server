@@ -66,14 +66,14 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 //для докер-контейнера
-/*builder.WebHost.ConfigureKestrel(options =>
+builder.WebHost.ConfigureKestrel(options =>
 {
     options.ListenAnyIP(8080); // HTTP
     options.ListenAnyIP(443, listenOptions =>
     {
         listenOptions.UseHttps("/https/fullchain.pem", "/https/privkey.pem");
     });
-});*/
+});
 
 
 

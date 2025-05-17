@@ -4173,3 +4173,1972 @@ RETURNING 1;
 UPDATE "Files" SET "CreatedAt" = @p0, "DiskId" = @p1, "FileName" = @p2, "FilePath" = @p3, "FileType" = @p4, "FolderId" = @p5, "Hash" = @p6, "IconId" = @p7, "IsDeleted" = @p8, "Size" = @p9, "UpdatedAt" = @p10
 WHERE "Id" = @p11
 RETURNING 1;
+2025-05-17 15:11:01.079 +03:00 [INF] User profile is available. Using 'C:\Users\artem\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-17 15:11:01.242 +03:00 [INF] Применение миграций, если они есть
+2025-05-17 15:11:01.659 +03:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-05-17 15:11:01.678 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsLock' AND "type" = 'table';
+2025-05-17 15:11:01.715 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT OR IGNORE INTO "__EFMigrationsLock"("Id", "Timestamp") VALUES(1, '2025-05-17 12:11:01.6829647+00:00');
+SELECT changes();
+2025-05-17 15:11:01.754 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE IF NOT EXISTS "__EFMigrationsHistory" (
+    "MigrationId" TEXT NOT NULL CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY,
+    "ProductVersion" TEXT NOT NULL
+);
+2025-05-17 15:11:01.764 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2025-05-17 15:11:01.768 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-05-17 15:11:01.774 +03:00 [INF] No migrations were applied. The database is already up to date.
+2025-05-17 15:11:01.821 +03:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "__EFMigrationsLock";
+2025-05-17 15:11:01.946 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Users" AS "u"
+2025-05-17 15:11:01.948 +03:00 [INF] Инициализация завершена
+2025-05-17 15:11:01.950 +03:00 [INF] Загрузка стандартных иконок, если они не были загружены
+2025-05-17 15:11:01.979 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__fileType_0='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.982 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.983 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.984 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.985 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.987 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.989 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.991 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.993 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.995 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:01.997 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.002 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.004 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.008 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.012 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.014 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.016 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.018 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.022 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__fileType_0='?' (Size = 4)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "FileIcons" AS "f"
+    WHERE NOT ("f"."IsGenerated") AND "f"."FileType" = @__fileType_0)
+2025-05-17 15:11:02.024 +03:00 [INF] Стандартные икноки загружены успешно
+2025-05-17 15:11:02.047 +03:00 [INF] IconGenerationHostedService запущен.
+2025-05-17 15:11:02.066 +03:00 [INF] FileCleanupService запущен.
+2025-05-17 15:11:02.067 +03:00 [INF] Следующий прогон очистки: "2025-05-18T00:00:00.0000000Z"
+2025-05-17 15:11:02.161 +03:00 [INF] Now listening on: https://localhost:7067
+2025-05-17 15:11:02.162 +03:00 [INF] Now listening on: http://localhost:5090
+2025-05-17 15:11:02.163 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-17 15:11:02.164 +03:00 [INF] Hosting environment: Development
+2025-05-17 15:11:02.164 +03:00 [INF] Content root path: D:\Пользователь\YandexDisk\CloudMedia\src\Presentation
+2025-05-17 15:11:02.834 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/index.html - null null
+2025-05-17 15:11:04.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/index.html - 200 null text/html;charset=utf-8 1362.3504ms
+2025-05-17 15:11:04.211 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-17 15:11:04.216 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/_framework/aspnetcore-browser-refresh.js - 200 13760 application/javascript; charset=utf-8 4.9332ms
+2025-05-17 15:11:04.249 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - null null
+2025-05-17 15:11:04.318 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 69.6813ms
+2025-05-17 15:11:09.064 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:11:09.153 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:11:09.169 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.212 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.255 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:11:09.267 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.285 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:11:09.292 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:11:09.305 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:11:09.327 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:11:09.330 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:11:09.334 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:11:09.353 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 179.2296ms
+2025-05-17 15:11:09.354 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:11:09.357 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 292.954ms
+2025-05-17 15:11:09.479 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=45&fileId=27 - application/json 0
+2025-05-17 15:11:09.480 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=47&fileId=29 - application/json 0
+2025-05-17 15:11:09.480 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=44&fileId=26 - application/json 0
+2025-05-17 15:11:09.479 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=48&fileId=30 - application/json 0
+2025-05-17 15:11:09.480 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=50&fileId=32 - application/json 0
+2025-05-17 15:11:09.480 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=46&fileId=28 - application/json 0
+2025-05-17 15:11:09.479 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=57&fileId=39 - application/json 0
+2025-05-17 15:11:09.481 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=51&fileId=33 - application/json 0
+2025-05-17 15:11:09.481 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=49&fileId=31 - application/json 0
+2025-05-17 15:11:09.481 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=54&fileId=36 - application/json 0
+2025-05-17 15:11:09.481 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=52&fileId=34 - application/json 0
+2025-05-17 15:11:09.481 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=53&fileId=35 - application/json 0
+2025-05-17 15:11:09.485 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.485 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.486 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.487 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.490 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.492 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.494 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.495 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.497 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.500 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.502 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.504 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.508 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.508 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.509 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.510 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.511 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.513 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.514 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.517 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.519 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.520 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.524 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.525 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.558 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.559 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.561 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.565 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.580 +03:00 [INF] Получен запрос на получени иконки с ID: 54
+2025-05-17 15:11:09.580 +03:00 [INF] Получен запрос на получени иконки с ID: 49
+2025-05-17 15:11:09.585 +03:00 [INF] Получен запрос на получени иконки с ID: 44
+2025-05-17 15:11:09.592 +03:00 [INF] Получен запрос на получени иконки с ID: 46
+2025-05-17 15:11:09.595 +03:00 [INF] Получен запрос на получени иконки с ID: 48
+2025-05-17 15:11:09.604 +03:00 [INF] Получен запрос на получени иконки с ID: 57
+2025-05-17 15:11:09.609 +03:00 [INF] Получен запрос на получени иконки с ID: 50
+2025-05-17 15:11:09.612 +03:00 [INF] Получен запрос на получени иконки с ID: 51
+2025-05-17 15:11:09.619 +03:00 [INF] Получен запрос на получени иконки с ID: 45
+2025-05-17 15:11:09.624 +03:00 [INF] Получен запрос на получени иконки с ID: 47
+2025-05-17 15:11:09.626 +03:00 [INF] Получен запрос на получени иконки с ID: 52
+2025-05-17 15:11:09.631 +03:00 [INF] Получен запрос на получени иконки с ID: 53
+2025-05-17 15:11:09.635 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.635 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.636 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.637 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.637 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.639 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.642 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.643 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.643 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.644 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.645 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.645 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.654 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.654 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.661 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.665 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.672 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.675 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.678 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.686 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.692 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.694 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.696 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.703 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.705 +03:00 [INF] Иконка для файла с ID 31 получена.
+2025-05-17 15:11:09.708 +03:00 [INF] Иконка для файла с ID 36 получена.
+2025-05-17 15:11:09.712 +03:00 [INF] Иконка для файла с ID 26 получена.
+2025-05-17 15:11:09.717 +03:00 [INF] Иконка для файла с ID 28 получена.
+2025-05-17 15:11:09.722 +03:00 [INF] Иконка для файла с ID 30 получена.
+2025-05-17 15:11:09.724 +03:00 [INF] Иконка для файла с ID 39 получена.
+2025-05-17 15:11:09.727 +03:00 [INF] Иконка для файла с ID 32 получена.
+2025-05-17 15:11:09.733 +03:00 [INF] Иконка для файла с ID 33 получена.
+2025-05-17 15:11:09.736 +03:00 [INF] Иконка для файла с ID 27 получена.
+2025-05-17 15:11:09.740 +03:00 [INF] Иконка для файла с ID 29 получена.
+2025-05-17 15:11:09.744 +03:00 [INF] Иконка для файла с ID 34 получена.
+2025-05-17 15:11:09.747 +03:00 [INF] Иконка для файла с ID 35 получена.
+2025-05-17 15:11:09.753 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.753 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.753 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.753 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.754 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.755 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.755 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.756 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.757 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.758 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.759 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.761 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:09.784 +03:00 [INF] Executing FileContentResult, sending file with download name '30_icon.jpg' ...
+2025-05-17 15:11:09.784 +03:00 [INF] Executing FileContentResult, sending file with download name '26_icon.jpg' ...
+2025-05-17 15:11:09.784 +03:00 [INF] Executing FileContentResult, sending file with download name '36_icon.jpg' ...
+2025-05-17 15:11:09.784 +03:00 [INF] Executing FileContentResult, sending file with download name '31_icon.jpg' ...
+2025-05-17 15:11:09.784 +03:00 [INF] Executing FileContentResult, sending file with download name '28_icon.jpg' ...
+2025-05-17 15:11:09.785 +03:00 [INF] Executing FileContentResult, sending file with download name '39_icon.jpg' ...
+2025-05-17 15:11:09.787 +03:00 [INF] Executing FileContentResult, sending file with download name '32_icon.jpg' ...
+2025-05-17 15:11:09.793 +03:00 [INF] Executing FileContentResult, sending file with download name '33_icon.jpg' ...
+2025-05-17 15:11:09.797 +03:00 [INF] Executing FileContentResult, sending file with download name '27_icon.jpg' ...
+2025-05-17 15:11:09.800 +03:00 [INF] Executing FileContentResult, sending file with download name '29_icon.jpg' ...
+2025-05-17 15:11:09.806 +03:00 [INF] Executing FileContentResult, sending file with download name '34_icon.jpg' ...
+2025-05-17 15:11:09.810 +03:00 [INF] Executing FileContentResult, sending file with download name '35_icon.jpg' ...
+2025-05-17 15:11:09.815 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 275.7065ms
+2025-05-17 15:11:09.815 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 278.8445ms
+2025-05-17 15:11:09.815 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 259.4446ms
+2025-05-17 15:11:09.819 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 265.4898ms
+2025-05-17 15:11:09.820 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 275.5079ms
+2025-05-17 15:11:09.821 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 274.4394ms
+2025-05-17 15:11:09.823 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 280.3555ms
+2025-05-17 15:11:09.824 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 274.4526ms
+2025-05-17 15:11:09.826 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 298.7827ms
+2025-05-17 15:11:09.827 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 296.4986ms
+2025-05-17 15:11:09.827 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 267.217ms
+2025-05-17 15:11:09.828 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 264.7638ms
+2025-05-17 15:11:09.829 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.830 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.833 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.834 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.836 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.837 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.838 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.839 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.840 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.842 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.843 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.845 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.846 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=48&fileId=30 - 200 17838 application/octet-stream 366.4932ms
+2025-05-17 15:11:09.846 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=44&fileId=26 - 200 17787 application/octet-stream 367.1249ms
+2025-05-17 15:11:09.856 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=47&fileId=29 - 200 17273 application/octet-stream 376.7707ms
+2025-05-17 15:11:09.860 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=58&fileId=40 - application/json 0
+2025-05-17 15:11:09.863 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=60&fileId=42 - application/json 0
+2025-05-17 15:11:09.855 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=45&fileId=27 - 200 17307 application/octet-stream 375.9026ms
+2025-05-17 15:11:09.852 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=50&fileId=32 - 200 14024 application/octet-stream 371.8226ms
+2025-05-17 15:11:09.865 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=59&fileId=41 - application/json 0
+2025-05-17 15:11:09.870 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.870 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.873 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=56&fileId=38 - application/json 0
+2025-05-17 15:11:09.849 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=46&fileId=28 - 200 17066 application/octet-stream 368.8361ms
+2025-05-17 15:11:09.848 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=49&fileId=31 - 200 16497 application/octet-stream 367.518ms
+2025-05-17 15:11:09.879 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.880 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.882 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.884 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.878 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=55&fileId=37 - application/json 0
+2025-05-17 15:11:09.886 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=62&fileId=44 - application/json 0
+2025-05-17 15:11:09.854 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=51&fileId=33 - 200 17299 application/octet-stream 373.6111ms
+2025-05-17 15:11:09.857 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=52&fileId=34 - 200 16047 application/octet-stream 375.9875ms
+2025-05-17 15:11:09.889 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.897 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.897 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.897 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.899 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.901 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.888 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=63&fileId=45 - application/json 0
+2025-05-17 15:11:09.904 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=65&fileId=47 - application/json 0
+2025-05-17 15:11:09.847 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=54&fileId=36 - 200 16900 application/octet-stream 366.5753ms
+2025-05-17 15:11:09.858 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=53&fileId=35 - 200 16555 application/octet-stream 376.7512ms
+2025-05-17 15:11:09.908 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.910 +03:00 [INF] Получен запрос на получени иконки с ID: 60
+2025-05-17 15:11:09.914 +03:00 [INF] Получен запрос на получени иконки с ID: 58
+2025-05-17 15:11:09.917 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.918 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.919 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.920 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.923 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.906 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=66&fileId=48 - application/json 0
+2025-05-17 15:11:09.925 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=67&fileId=49 - application/json 0
+2025-05-17 15:11:09.850 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=57&fileId=39 - 200 15442 application/octet-stream 370.6808ms
+2025-05-17 15:11:09.876 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=61&fileId=43 - application/json 0
+2025-05-17 15:11:09.929 +03:00 [INF] Получен запрос на получени иконки с ID: 59
+2025-05-17 15:11:09.930 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.932 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.936 +03:00 [INF] Получен запрос на получени иконки с ID: 56
+2025-05-17 15:11:09.938 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.939 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.940 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.942 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.945 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.947 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.927 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=68&fileId=50 - application/json 0
+2025-05-17 15:11:09.949 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=64&fileId=46 - application/json 0
+2025-05-17 15:11:09.950 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.952 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.955 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.957 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.958 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.960 +03:00 [INF] Получен запрос на получени иконки с ID: 55
+2025-05-17 15:11:09.965 +03:00 [INF] Получен запрос на получени иконки с ID: 62
+2025-05-17 15:11:09.968 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.969 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:09.970 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.970 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.974 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.975 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:09.976 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:09.978 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.982 +03:00 [INF] Иконка для файла с ID 42 получена.
+2025-05-17 15:11:09.987 +03:00 [INF] Иконка для файла с ID 40 получена.
+2025-05-17 15:11:09.989 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:09.990 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.990 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:09.996 +03:00 [INF] Получен запрос на получени иконки с ID: 63
+2025-05-17 15:11:10.000 +03:00 [INF] Получен запрос на получени иконки с ID: 65
+2025-05-17 15:11:10.004 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:10.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:10.007 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:10.008 +03:00 [INF] Route matched with {action = "DownloadIconByFileId", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadIconByFileId(Int32, Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:10.010 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:10.016 +03:00 [INF] Иконка для файла с ID 41 получена.
+2025-05-17 15:11:10.019 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.020 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.024 +03:00 [INF] Иконка для файла с ID 38 получена.
+2025-05-17 15:11:10.028 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.032 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.035 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.036 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.039 +03:00 [INF] Получен запрос на получени иконки с ID: 66
+2025-05-17 15:11:10.041 +03:00 [INF] Получен запрос на получени иконки с ID: 67
+2025-05-17 15:11:10.044 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:10.049 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:10.051 +03:00 [INF] Получен запрос на получени иконки с ID: 61
+2025-05-17 15:11:10.052 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.056 +03:00 [INF] Executing FileContentResult, sending file with download name '42_icon.jpg' ...
+2025-05-17 15:11:10.058 +03:00 [INF] Executing FileContentResult, sending file with download name '40_icon.jpg' ...
+2025-05-17 15:11:10.059 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.061 +03:00 [INF] Иконка для файла с ID 37 получена.
+2025-05-17 15:11:10.065 +03:00 [INF] Иконка для файла с ID 44 получена.
+2025-05-17 15:11:10.068 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.070 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.071 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.072 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.076 +03:00 [INF] Получен запрос на получени иконки с ID: 68
+2025-05-17 15:11:10.079 +03:00 [INF] Получен запрос на получени иконки с ID: 64
+2025-05-17 15:11:10.079 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.082 +03:00 [INF] Executing FileContentResult, sending file with download name '41_icon.jpg' ...
+2025-05-17 15:11:10.084 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 190.1713ms
+2025-05-17 15:11:10.086 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 189.8976ms
+2025-05-17 15:11:10.088 +03:00 [INF] Executing FileContentResult, sending file with download name '38_icon.jpg' ...
+2025-05-17 15:11:10.089 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.090 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.092 +03:00 [INF] Иконка для файла с ID 45 получена.
+2025-05-17 15:11:10.098 +03:00 [INF] Иконка для файла с ID 47 получена.
+2025-05-17 15:11:10.103 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.108 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.109 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.110 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:10.112 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.113 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 205.3112ms
+2025-05-17 15:11:10.113 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.116 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.118 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 201.5108ms
+2025-05-17 15:11:10.120 +03:00 [INF] Executing FileContentResult, sending file with download name '37_icon.jpg' ...
+2025-05-17 15:11:10.122 +03:00 [INF] Executing FileContentResult, sending file with download name '44_icon.jpg' ...
+2025-05-17 15:11:10.123 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.126 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.128 +03:00 [INF] Иконка для файла с ID 48 получена.
+2025-05-17 15:11:10.130 +03:00 [INF] Иконка для файла с ID 49 получена.
+2025-05-17 15:11:10.133 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.137 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__iconId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."Id" = @__iconId_0
+LIMIT 1
+2025-05-17 15:11:10.140 +03:00 [INF] Иконка для файла с ID 43 получена.
+2025-05-17 15:11:10.141 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.141 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=60&fileId=42 - 200 17433 application/octet-stream 278.4574ms
+2025-05-17 15:11:10.142 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=58&fileId=40 - 200 15807 application/octet-stream 281.8617ms
+2025-05-17 15:11:10.160 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=59&fileId=41 - 200 16374 application/octet-stream 295.2326ms
+2025-05-17 15:11:10.143 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.146 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 208.4463ms
+2025-05-17 15:11:10.147 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 208.1307ms
+2025-05-17 15:11:10.150 +03:00 [INF] Executing FileContentResult, sending file with download name '45_icon.jpg' ...
+2025-05-17 15:11:10.152 +03:00 [INF] Executing FileContentResult, sending file with download name '47_icon.jpg' ...
+2025-05-17 15:11:10.153 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.153 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.157 +03:00 [INF] Иконка для файла с ID 50 получена.
+2025-05-17 15:11:10.159 +03:00 [INF] Иконка для файла с ID 46 получена.
+2025-05-17 15:11:10.160 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.170 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=56&fileId=38 - 200 17101 application/octet-stream 296.6406ms
+2025-05-17 15:11:10.171 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.172 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.173 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 205.6227ms
+2025-05-17 15:11:10.174 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 205.1038ms
+2025-05-17 15:11:10.178 +03:00 [INF] Executing FileContentResult, sending file with download name '48_icon.jpg' ...
+2025-05-17 15:11:10.180 +03:00 [INF] Executing FileContentResult, sending file with download name '49_icon.jpg' ...
+2025-05-17 15:11:10.181 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.181 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__fileId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."UserId" = @__userId_0 AND "u"."FileId" = @__fileId_1
+LIMIT 1
+2025-05-17 15:11:10.184 +03:00 [INF] Executing FileContentResult, sending file with download name '43_icon.jpg' ...
+2025-05-17 15:11:10.188 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=55&fileId=37 - 200 16568 application/octet-stream 310.0811ms
+2025-05-17 15:11:10.189 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=62&fileId=44 - 200 15681 application/octet-stream 302.579ms
+2025-05-17 15:11:10.190 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.191 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.192 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 189.0469ms
+2025-05-17 15:11:10.193 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 187.081ms
+2025-05-17 15:11:10.197 +03:00 [INF] Executing FileContentResult, sending file with download name '50_icon.jpg' ...
+2025-05-17 15:11:10.200 +03:00 [INF] Executing FileContentResult, sending file with download name '46_icon.jpg' ...
+2025-05-17 15:11:10.201 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 191.7668ms
+2025-05-17 15:11:10.208 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=63&fileId=45 - 200 16229 application/octet-stream 319.3531ms
+2025-05-17 15:11:10.209 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=65&fileId=47 - 200 15339 application/octet-stream 304.7029ms
+2025-05-17 15:11:10.210 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.211 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.212 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 169.5249ms
+2025-05-17 15:11:10.213 +03:00 [INF] Executed action Presentation.Controllers.FileController.DownloadIconByFileId (Presentation) in 164.5651ms
+2025-05-17 15:11:10.216 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.220 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=66&fileId=48 - 200 18784 application/octet-stream 314.5892ms
+2025-05-17 15:11:10.221 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=67&fileId=49 - 200 17643 application/octet-stream 295.8796ms
+2025-05-17 15:11:10.222 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.223 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DownloadIconByFileId (Presentation)'
+2025-05-17 15:11:10.225 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=61&fileId=43 - 200 17113 application/octet-stream 349.0225ms
+2025-05-17 15:11:10.230 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=68&fileId=50 - 200 17128 application/octet-stream 302.6264ms
+2025-05-17 15:11:10.231 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/download/icon?iconId=64&fileId=46 - 200 18597 application/octet-stream 282.232ms
+2025-05-17 15:11:13.196 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:11:13.199 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:11:13.200 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:13.203 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:13.208 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:11:13.210 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:13.212 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:11:13.213 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:11:13.220 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:11:13.224 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:11:13.229 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:11:13.230 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:11:13.231 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 29.2335ms
+2025-05-17 15:11:13.232 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:11:13.233 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 36.7248ms
+2025-05-17 15:11:16.358 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:16.360 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:16.363 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:16.365 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:16.370 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:16.370 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:16.383 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:16.402 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:16.415 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:16.417 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:16.417 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:16.420 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:16.423 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:16.423 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:16.426 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:16.428 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:16.436 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 71.5383ms
+2025-05-17 15:11:16.438 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:16.439 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 71272548 video/mp4 81.3719ms
+2025-05-17 15:11:23.930 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:23.932 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:23.933 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:23.935 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:23.937 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:23.938 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:23.943 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:23.946 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:23.951 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 7531.7055ms
+2025-05-17 15:11:23.952 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:23.952 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 17.7852ms
+2025-05-17 15:11:23.953 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 70551660 video/mp4 7537.8164ms
+2025-05-17 15:11:23.954 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:23.957 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 1028072 video/mp4 27.0994ms
+2025-05-17 15:11:24.485 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.487 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.488 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.491 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.497 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.498 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.503 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.509 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.516 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 26.6598ms
+2025-05-17 15:11:24.517 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.518 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 1950562 video/mp4 32.9197ms
+2025-05-17 15:11:24.573 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.574 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.575 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.578 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.580 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.581 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.586 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.591 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.602 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 24.899ms
+2025-05-17 15:11:24.603 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.604 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 4424729 video/mp4 31.3811ms
+2025-05-17 15:11:24.624 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.625 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.626 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.628 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.635 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.636 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.641 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.645 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.651 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 23.0294ms
+2025-05-17 15:11:24.651 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.652 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 780430 video/mp4 28.8497ms
+2025-05-17 15:11:24.662 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.663 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.665 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.669 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.671 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.672 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.677 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.680 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.729 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.732 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.732 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.735 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.737 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.738 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.743 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.746 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.750 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 82.4123ms
+2025-05-17 15:11:24.751 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.753 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 23146042 video/mp4 91.4292ms
+2025-05-17 15:11:24.815 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.817 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.818 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.822 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.826 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.827 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.831 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.837 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.843 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 108.6681ms
+2025-05-17 15:11:24.844 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.845 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 34857926 video/mp4 115.4781ms
+2025-05-17 15:11:24.857 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.859 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.860 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.863 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.867 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.870 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.872 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.880 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.884 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 63.4308ms
+2025-05-17 15:11:24.885 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.887 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 16132128 video/mp4 71.7979ms
+2025-05-17 15:11:24.907 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:11:24.909 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.910 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:11:24.913 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:11:24.915 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:11:24.919 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:11:24.923 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:11:24.931 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:11:24.935 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 72.0957ms
+2025-05-17 15:11:24.936 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:11:24.938 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 36337530 video/mp4 81.7333ms
+2025-05-17 15:13:32.590 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 127678.0477ms
+2025-05-17 15:13:32.591 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:13:32.592 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 16132128 video/mp4 127685.1673ms
+2025-05-17 15:13:50.233 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:13:50.235 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:13:50.236 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:13:50.238 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:13:50.240 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:13:50.241 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:13:50.245 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:13:50.247 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:13:50.267 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/51 - null null
+2025-05-17 15:13:50.269 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:13:50.269 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:13:50.272 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:13:50.274 +03:00 [INF] Получен запрос на стриминг видео. FileId=51
+2025-05-17 15:13:50.274 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:13:50.278 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:13:50.281 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\P1050451.MP4' with download name 'P1050451.MP4' ...
+2025-05-17 15:13:50.286 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 49.2691ms
+2025-05-17 15:13:50.288 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:13:50.289 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 71272548 video/mp4 56.0124ms
+2025-05-17 15:13:56.105 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 5833.5977ms
+2025-05-17 15:13:56.106 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:13:56.107 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/51 - 206 70551660 video/mp4 5839.6743ms
+2025-05-17 15:13:59.409 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json?id=1 - application/json 0
+2025-05-17 15:13:59.411 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:13:59.412 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:13:59.414 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:13:59.417 +03:00 [INF] Получен запрос на получение директории с ID: 1
+2025-05-17 15:13:59.422 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:13:59.427 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:13:59.428 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."Id" = @__parentFolderId_1
+LIMIT 1
+2025-05-17 15:13:59.431 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" = @__parentFolderId_1
+2025-05-17 15:13:59.437 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" = @__parentFolderId_1 AND NOT ("f"."IsDeleted")
+2025-05-17 15:13:59.439 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:13:59.440 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:13:59.443 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 29.2232ms
+2025-05-17 15:13:59.445 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:13:59.446 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json?id=1 - 200 null application/json; charset=utf-8 36.9342ms
+2025-05-17 15:14:00.802 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:14:00.804 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:00.805 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:00.807 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:00.811 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:14:00.817 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:00.822 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:14:00.827 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:14:00.830 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:14:00.839 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:14:00.845 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:14:00.846 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:14:00.848 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 42.1709ms
+2025-05-17 15:14:00.856 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:00.857 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 54.5541ms
+2025-05-17 15:14:01.398 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json?id=2 - application/json 0
+2025-05-17 15:14:01.400 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:01.401 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:01.404 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:01.406 +03:00 [INF] Получен запрос на получение директории с ID: 2
+2025-05-17 15:14:01.409 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:01.411 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:14:01.412 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."Id" = @__parentFolderId_1
+LIMIT 1
+2025-05-17 15:14:01.414 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" = @__parentFolderId_1
+2025-05-17 15:14:01.417 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__parentFolderId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" = @__parentFolderId_1 AND NOT ("f"."IsDeleted")
+2025-05-17 15:14:01.421 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:14:01.421 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:14:01.423 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 19.7356ms
+2025-05-17 15:14:01.424 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:01.425 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json?id=2 - 200 null application/json; charset=utf-8 26.9478ms
+2025-05-17 15:14:02.466 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:14:02.468 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:02.469 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:02.471 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:02.473 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:14:02.474 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:02.477 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:14:02.478 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:14:02.480 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:14:02.483 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:14:02.485 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:14:02.487 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:14:02.489 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 18.0326ms
+2025-05-17 15:14:02.489 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:14:02.490 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 24.64ms
+2025-05-17 15:14:03.753 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/5 - null null
+2025-05-17 15:14:03.755 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:03.756 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:03.759 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:03.761 +03:00 [INF] Получен запрос на стриминг видео. FileId=5
+2025-05-17 15:14:03.763 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:03.766 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:14:03.769 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\момент из Бригады.flv.mp4' with download name 'момент из Бригады.flv.mp4' ...
+2025-05-17 15:14:03.792 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/5 - null null
+2025-05-17 15:14:03.795 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:03.795 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:03.798 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:03.801 +03:00 [INF] Получен запрос на стриминг видео. FileId=5
+2025-05-17 15:14:03.804 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:03.807 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:14:03.810 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\момент из Бригады.flv.mp4' with download name 'момент из Бригады.flv.mp4' ...
+2025-05-17 15:14:03.818 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 59.5259ms
+2025-05-17 15:14:03.819 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:03.820 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/5 - 206 31297273 video/mp4 66.9816ms
+2025-05-17 15:14:03.820 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 22.5355ms
+2025-05-17 15:14:03.825 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:03.826 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/5 - 206 299946 video/mp4 33.5062ms
+2025-05-17 15:14:03.864 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/video/5 - null null
+2025-05-17 15:14:03.866 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:03.867 +03:00 [INF] Route matched with {action = "GetStreamVideo", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetStreamVideo(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:03.869 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:03.871 +03:00 [INF] Получен запрос на стриминг видео. FileId=5
+2025-05-17 15:14:03.872 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:03.876 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__id_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" = @__id_1 AND NOT ("f"."IsDeleted")
+LIMIT 1
+2025-05-17 15:14:03.878 +03:00 [INF] Executing PhysicalFileResult, sending file 'Z:\folder_1\момент из Бригады.flv.mp4' with download name 'момент из Бригады.flv.mp4' ...
+2025-05-17 15:14:04.895 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetStreamVideo (Presentation) in 1025.9504ms
+2025-05-17 15:14:04.896 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetStreamVideo (Presentation)'
+2025-05-17 15:14:04.897 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/video/5 - 206 31297225 video/mp4 1033.2461ms
+2025-05-17 15:14:08.649 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:14:08.651 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:08.654 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:08.656 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:08.660 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:14:08.661 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:08.669 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:14:08.676 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:08.717 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:14:08.754 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:08.755 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:14:08.757 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 101.3149ms
+2025-05-17 15:14:08.757 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:08.758 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 108.9862ms
+2025-05-17 15:14:15.999 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:14:16.000 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:16.001 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:16.003 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:16.006 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:14:16.006 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:16.014 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:14:16.018 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:16.031 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:14:16.055 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:16.056 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:14:16.057 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 54.3594ms
+2025-05-17 15:14:16.058 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:16.059 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 60.3542ms
+2025-05-17 15:14:19.927 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:14:19.928 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:19.929 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:14:19.931 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:14:19.934 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:14:19.935 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:14:19.943 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:14:19.947 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:19.963 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:14:19.989 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:14:19.990 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:14:19.991 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 60.2613ms
+2025-05-17 15:14:19.992 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:14:19.993 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 65.9442ms
+2025-05-17 15:15:00.533 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7067/api/auth/login - application/json 47
+2025-05-17 15:15:00.538 +03:00 [INF] CORS policy execution successful.
+2025-05-17 15:15:00.539 +03:00 [INF] Executing endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-05-17 15:15:00.543 +03:00 [INF] Route matched with {action = "Login", controller = "Auth", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.Models.LoginModel) on controller Presentation.Controllers.AuthController (Presentation).
+2025-05-17 15:15:00.555 +03:00 [INF] Получен запрос на вход пользователя: admin
+2025-05-17 15:15:00.560 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-05-17 15:15:00.568 +03:00 [INF] Успешная аутентификация пользователя: admin
+2025-05-17 15:15:00.572 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__model_Username_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__model_Username_0
+LIMIT 1
+2025-05-17 15:15:00.578 +03:00 [INF] JWT-токен успешно сгенерирован для пользователя: admin
+2025-05-17 15:15:00.582 +03:00 [INF] Токен успешно сгенерирован для пользователя: admin
+2025-05-17 15:15:00.584 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-17 15:15:00.588 +03:00 [INF] Executed action Presentation.Controllers.AuthController.Login (Presentation) in 42.8015ms
+2025-05-17 15:15:00.589 +03:00 [INF] Executed endpoint 'Presentation.Controllers.AuthController.Login (Presentation)'
+2025-05-17 15:15:00.591 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7067/api/auth/login - 200 null application/json; charset=utf-8 57.5908ms
+2025-05-17 15:15:30.640 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:15:30.644 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:15:30.645 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:15:30.648 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:15:30.656 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:15:30.657 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:15:30.660 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:15:30.664 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:15:30.678 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:15:30.704 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:15:30.704 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:15:30.706 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 58.2117ms
+2025-05-17 15:15:30.707 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:15:30.708 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 68.2104ms
+2025-05-17 15:17:43.967 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:43.969 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:43.969 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:43.971 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:43.974 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:43.975 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:43.980 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:43.988 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:44.004 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:44.029 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:44.029 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:44.031 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 59.801ms
+2025-05-17 15:17:44.031 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:44.033 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 65.8679ms
+2025-05-17 15:17:45.042 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:45.043 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.044 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:45.047 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:45.048 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:45.049 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:45.053 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:45.055 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.068 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:45.092 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.092 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:45.093 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 47.2887ms
+2025-05-17 15:17:45.094 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.095 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 53.5331ms
+2025-05-17 15:17:45.703 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:45.705 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.705 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:45.708 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:45.710 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:45.710 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:45.714 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:45.716 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.729 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:45.753 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.753 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:45.755 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 47.3957ms
+2025-05-17 15:17:45.755 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.756 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 53.4271ms
+2025-05-17 15:17:45.857 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:45.859 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.860 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:45.862 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:45.863 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:45.864 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:45.868 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:45.870 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.882 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:45.906 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:45.907 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:45.908 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 46.6696ms
+2025-05-17 15:17:45.909 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:45.910 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 52.2573ms
+2025-05-17 15:17:46.026 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:46.027 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.028 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:46.030 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:46.032 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:46.033 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:46.035 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:46.039 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.051 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:46.074 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.075 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:46.076 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 46.9162ms
+2025-05-17 15:17:46.077 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.078 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 52.337ms
+2025-05-17 15:17:46.562 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:46.563 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.564 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:46.566 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:46.568 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:46.568 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:46.573 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:46.575 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.587 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:46.610 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.611 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:46.612 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 46.4961ms
+2025-05-17 15:17:46.613 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.614 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 52.0102ms
+2025-05-17 15:17:46.714 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:46.716 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.716 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:46.718 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:46.720 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:46.721 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:46.725 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:46.727 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.740 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:46.763 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:46.764 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:46.765 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 46.7178ms
+2025-05-17 15:17:46.766 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:46.767 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 52.7519ms
+2025-05-17 15:17:52.722 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7067/api/files/delete/4 - application/json; charset=utf-8 8
+2025-05-17 15:17:52.724 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.DeleteFile (Presentation)'
+2025-05-17 15:17:52.727 +03:00 [INF] Route matched with {action = "DeleteFile", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteFile(Int32) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:52.729 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:52.733 +03:00 [INF] Получен запрос на удаление файла с ID: 4
+2025-05-17 15:17:52.737 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:52.747 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "Files" AS "f"
+WHERE "f"."Id" = @__id_0
+LIMIT 1
+2025-05-17 15:17:52.755 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32), @__userId_1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId"
+FROM "UserFiles" AS "u"
+WHERE "u"."FileId" = @__id_0 AND "u"."UserId" = @__userId_1
+LIMIT 1
+2025-05-17 15:17:52.770 +03:00 [INF] Файл с ID 4 успешно удален с диска.
+2025-05-17 15:17:52.822 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 53), @p3='?' (Size = 68), @p4='?' (Size = 4), @p5='?' (DbType = Int32), @p6='?' (Size = 64), @p7='?' (DbType = Int32), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64), @p10='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Files" SET "CreatedAt" = @p0, "DiskId" = @p1, "FileName" = @p2, "FilePath" = @p3, "FileType" = @p4, "FolderId" = @p5, "Hash" = @p6, "IconId" = @p7, "IsDeleted" = @p8, "Size" = @p9, "UpdatedAt" = @p10
+WHERE "Id" = @p11
+RETURNING 1;
+2025-05-17 15:17:52.890 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:52.891 +03:00 [INF] Executed action Presentation.Controllers.FileController.DeleteFile (Presentation) in 162.9033ms
+2025-05-17 15:17:52.892 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.DeleteFile (Presentation)'
+2025-05-17 15:17:52.893 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7067/api/files/delete/4 - 200 null text/plain; charset=utf-8 170.4846ms
+2025-05-17 15:17:52.900 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:17:52.902 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:17:52.903 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:52.906 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:52.911 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:17:52.911 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:52.915 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:17:52.916 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:17:52.925 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:17:52.930 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:17:52.933 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:17:52.934 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:17:52.941 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 34.749ms
+2025-05-17 15:17:52.943 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:17:52.944 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 44.0512ms
+2025-05-17 15:17:55.168 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:55.170 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:55.171 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:55.173 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:55.174 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:55.175 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:55.177 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:55.181 +03:00 [INF] Список файлов успешно получен.
+2025-05-17 15:17:55.182 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Application.Services.FileDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-17 15:17:55.183 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 11.3055ms
+2025-05-17 15:17:55.184 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:55.185 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 200 null application/json; charset=utf-8 16.7329ms
+2025-05-17 15:17:58.264 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/restore-many-files - application/json; charset=utf-8 3
+2025-05-17 15:17:58.266 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.RestoreManyAsync (Presentation)'
+2025-05-17 15:17:58.269 +03:00 [INF] Route matched with {action = "RestoreMany", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RestoreManyAsync(System.Collections.Generic.List`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:58.270 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:58.276 +03:00 [INF] Получен запрос на восстановление файлов.
+2025-05-17 15:17:58.277 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:58.352 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__ids_1='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."FileId", "u"."Share", "u"."UserId", "f"."Id", "f"."CreatedAt", "f"."DiskId", "f"."FileName", "f"."FilePath", "f"."FileType", "f"."FolderId", "f"."Hash", "f"."IconId", "f"."IsDeleted", "f"."Size", "f"."UpdatedAt"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."Id" IN (
+    SELECT "i"."value"
+    FROM json_each(@__ids_1) AS "i"
+) AND "f"."IsDeleted"
+2025-05-17 15:17:58.357 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p11='?' (DbType = Int32), @p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (Size = 53), @p3='?' (Size = 68), @p4='?' (Size = 4), @p5='?' (DbType = Int32), @p6='?' (Size = 64), @p7='?' (DbType = Int32), @p8='?' (DbType = Boolean), @p9='?' (DbType = Int64), @p10='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Files" SET "CreatedAt" = @p0, "DiskId" = @p1, "FileName" = @p2, "FilePath" = @p3, "FileType" = @p4, "FolderId" = @p5, "Hash" = @p6, "IconId" = @p7, "IsDeleted" = @p8, "Size" = @p9, "UpdatedAt" = @p10
+WHERE "Id" = @p11
+RETURNING 1;
+2025-05-17 15:17:58.398 +03:00 [INF] Восстановлено 1 файлов для UserId=1.
+2025-05-17 15:17:58.401 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2025-05-17 15:17:58.402 +03:00 [INF] Executed action Presentation.Controllers.FileController.RestoreManyAsync (Presentation) in 131.8918ms
+2025-05-17 15:17:58.403 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.RestoreManyAsync (Presentation)'
+2025-05-17 15:17:58.404 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/restore-many-files - 200 0 null 140.0501ms
+2025-05-17 15:17:58.410 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - null null
+2025-05-17 15:17:58.412 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:58.413 +03:00 [INF] Route matched with {action = "GetFilesList", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetFilesList(System.Nullable`1[System.Boolean]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:17:58.415 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:17:58.418 +03:00 [INF] Получен запрос на получение списка файлов.
+2025-05-17 15:17:58.419 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:17:58.422 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32), @__isDeleted_1='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."IsDeleted" = @__isDeleted_1
+2025-05-17 15:17:58.424 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:58.444 +03:00 [ERR] Ошибка при получении списка файлов.
+System.InvalidOperationException: Файлы не найдены.
+   at Application.Services.FileService.GetFilesList(Int32 userId, Nullable`1 isDeleted) in D:\Пользователь\YandexDisk\CloudMedia\src\Application\Services\FileService.cs:line 46
+2025-05-17 15:17:58.467 +03:00 [WRN] Файлы не найдены.
+2025-05-17 15:17:58.468 +03:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2025-05-17 15:17:58.469 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetFilesList (Presentation) in 54.2564ms
+2025-05-17 15:17:58.470 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetFilesList (Presentation)'
+2025-05-17 15:17:58.471 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7067/api/files/list?isDeleted=true - 404 null text/plain; charset=utf-8 60.8956ms
+2025-05-17 15:18:05.184 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7067/api/files/json - application/json 0
+2025-05-17 15:18:05.186 +03:00 [INF] Executing endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:18:05.187 +03:00 [INF] Route matched with {action = "GetJsonRecord", controller = "File", page = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetJsonRecord(System.Nullable`1[System.Int32]) on controller Presentation.Controllers.FileController (Presentation).
+2025-05-17 15:18:05.189 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileType", "f"."IconData", "f"."IsGenerated"
+FROM "FileIcons" AS "f"
+WHERE "f"."FileType" = '.folder'
+LIMIT 1
+2025-05-17 15:18:05.192 +03:00 [INF] Получен запрос на получение директории с ID: 
+2025-05-17 15:18:05.192 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "u"."Id", "u"."DateRegistration", "u"."Email", "u"."FreeSpace", "u"."IsAdmin", "u"."PasswordHash", "u"."Username"
+FROM "Users" AS "u"
+WHERE "u"."Username" = @__userName_0
+LIMIT 1
+2025-05-17 15:18:05.200 +03:00 [INF] Начало получения директории пользователя с ID 1.
+2025-05-17 15:18:05.204 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Name"
+FROM "Folders" AS "f"
+WHERE 0
+LIMIT 1
+2025-05-17 15:18:05.209 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__folderIconId_2='?' (DbType = Int32), @__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."Name", "f"."ParentFolderId", @__folderIconId_2 AS "IconId"
+FROM "Folders" AS "f"
+WHERE "f"."UserId" = @__userId_0 AND "f"."ParentFolderId" IS NULL
+2025-05-17 15:18:05.212 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."FileName", "f"."Size", "f"."FileType", "f"."CreatedAt", "f"."IconId"
+FROM "UserFiles" AS "u"
+INNER JOIN "Files" AS "f" ON "u"."FileId" = "f"."Id"
+WHERE "u"."UserId" = @__userId_0 AND "f"."FolderId" IS NULL AND NOT ("f"."IsDeleted")
+2025-05-17 15:18:05.221 +03:00 [INF] Директория пользователя с ID 1 успешно загружена.
+2025-05-17 15:18:05.221 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.Services.JsonRecord'.
+2025-05-17 15:18:05.223 +03:00 [INF] Executed action Presentation.Controllers.FileController.GetJsonRecord (Presentation) in 34.4283ms
+2025-05-17 15:18:05.225 +03:00 [INF] Executed endpoint 'Presentation.Controllers.FileController.GetJsonRecord (Presentation)'
+2025-05-17 15:18:05.226 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7067/api/files/json - 200 null application/json; charset=utf-8 41.6289ms
