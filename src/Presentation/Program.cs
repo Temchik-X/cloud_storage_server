@@ -28,6 +28,11 @@ builder.Services.AddHostedService<IconGenerationHostedService>();
 
 builder.Services.AddSingleton<FileExtensionContentTypeProvider>();
 
+builder.Services.AddScoped<StreamService>();
+
+// Hosted services
+
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
@@ -110,6 +115,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString));
 
 builder.Services.AddHostedService<FileCleanupService>();
+builder.Services.AddHostedService<LinkCleanupService>();
 
 // Добавляем аутентификацию
 builder.Services.AddAuthentication(options =>

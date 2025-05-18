@@ -19,8 +19,6 @@ RUN mkdir -p /app/Data && mkdir -p /app/storage && mkdir -p /app/Data/DefaultIco
 # Копируем иконки
 COPY src/Application/Data/DefaultIcons /app/Data/DefaultIcons
 
-COPY certs/aspnetapp.pfx /https/aspnetapp.pfx
-
 
 # Копируем приложение (без базы — она будет в volume)
 COPY --from=build /app/publish .

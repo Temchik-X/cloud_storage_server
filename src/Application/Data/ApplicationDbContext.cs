@@ -17,6 +17,7 @@ namespace Application.Data
         public DbSet<ServiceFolderModel> SubFolders { get; set; }
         public DbSet<FileIcon> FileIcons { get; set; }
         public DbSet<FileModel> Files { get; set; }
+        public DbSet<FileAccessLink> FileAccessLinks { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
